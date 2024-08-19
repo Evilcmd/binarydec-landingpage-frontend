@@ -14,67 +14,6 @@ import CheckCircleRoundedIcon from "@mui/icons-material/CheckCircleRounded";
 import TextField from "@mui/icons-material/TextFieldsOutlined";
 import { blue } from "@mui/material/colors";
 
-const tiers = [
-  {
-    title: "Free",
-    price: "0",
-    description: [
-      "10 users included",
-      "2 GB of storage",
-      "Help center access",
-      "Email support",
-    ],
-    buttonText: "Sign up for free",
-    buttonVariant: "outlined",
-  },
-  {
-    title: "Professional",
-    subheader: "Recommended",
-    price: "15",
-    description: [
-      "20 users included",
-      "10 GB of storage",
-      "Help center access",
-      "Priority email support",
-      "Dedicated team",
-      "Best deals",
-    ],
-    buttonText: "Start now",
-    buttonVariant: "contained",
-  },
-  {
-    title: "Enterprise",
-    price: "30",
-    description: [
-      "50 users included",
-      "30 GB of storage",
-      "Help center access",
-      "Phone & email support",
-    ],
-    buttonText: "Contact us",
-    buttonVariant: "outlined",
-  },
-];
-
-const Fields = () => {
-  return (
-    <div
-      style={{
-        marginLeft: "40%",
-      }}
-    >
-      <h2>How to use TextField Component in ReactJS?</h2>
-      <TextField
-        // error={name.length === 0}
-        // helperText={!name.length ? 'name is required' : ''}
-        // value={name}
-        label="Enter your name"
-        id="name"
-        required
-      />
-    </div>
-  );
-};
 
 export default function Pricing() {
   const formStyle = {
@@ -171,6 +110,26 @@ export default function Pricing() {
     },
   };
 
+  //state management stuffs
+  const [formData,setFormData]=React.useState({
+    name:'',
+    email:'',
+    feedback:'',
+  });
+
+
+  const handleSubmit=async(event)=>{
+    // event.preventDefault();
+    alert(formData);    
+};
+
+  const handleOnChange=(event)=>{
+    setFormData({
+        ...formData,
+        [event.target.name]:event.target.value,
+    });
+  };
+
   return (
     <div id="pricing">
 
@@ -187,9 +146,11 @@ export default function Pricing() {
      
       <div style={{
         display:'flex',
+        flexWrap:'wrap',
         justifyContent:'space-evenly',
         alignItems:'center',
         marginTop:'2rem',
+        
       }}>
 
         <div
@@ -200,6 +161,17 @@ export default function Pricing() {
                 borderRadius:'1rem',
                 background:'linear-gradient(#033363, #021F3B)',
                 padding:'1.5rem',
+                "@media(min-width:992px)": {
+                    width:"25%",
+                },
+                "@media(min-width:768px)":{
+                    width:'75%',
+                    marginBottom:'3rem',
+                },
+                "@media(min-width:576px)":{
+                    width:'80%',
+                    marginBottom:'3rem',
+                },
                }}
         >
             <div>
@@ -218,7 +190,10 @@ export default function Pricing() {
             </div>
 
             <div>
-                <form style={formStyle}>
+                <form 
+                onSubmit={handleSubmit}
+
+                style={formStyle}>
                 {/* name field  */}
                 <div style={divlabelTextStyle}>
                     <label htmlFor="name" style={textFieldStyle}>
@@ -229,6 +204,8 @@ export default function Pricing() {
                     id="name"
                     placeholder="David Bechkam"
                     min={3}
+                    value={formData.name}
+                    onChange={handleOnChange}
                     maxLength={100}
                     required
                     name="name"
@@ -266,13 +243,14 @@ export default function Pricing() {
                 </form>
             </div>
 
-                <div style={{
+                <div 
+                style={{
                     display:'flex',
                     justifyContent:'center',
                     alignItems:'center',
                 }}>
                     <button style={preSignUpBtnStyle} type="submit">
-                    Pre-Sign
+                        Pre-Sign
                     </button>
                 </div>
         </div>
@@ -285,7 +263,18 @@ export default function Pricing() {
                 borderRadius:'1rem',
                 background:'linear-gradient(#033363, #021F3B)',
                 padding:'1.5rem',
-                width:'25%',
+                "@media(min-width:992px)": {
+                    width:"25%",
+                },
+                "@media(min-width:768px)":{
+                    width:'75%',
+                    marginBottom:'3rem',
+                },
+                "@media(min-width:576px)":{
+                    width:'80%',
+                    marginBottom:'3rem',
+                },
+               
                }}
         >
           <div>
