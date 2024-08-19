@@ -22,7 +22,7 @@ function Copyright() {
     return (
         <Typography variant="body2" color="text.secondary" mt={1}>
             {'Copyright © '}
-            <Link href="#">ByteDec&nbsp;</Link>
+            <Link href="#">BinaryDec&nbsp;</Link>
             {new Date().getFullYear()}
         </Typography>
     );
@@ -99,16 +99,16 @@ export default function Footer() {
                     <Typography variant="body2" fontWeight={600}>
                         Product
                     </Typography>
-                    <Link color="text.secondary" onClick={() => scrollToSection('pricing')}>
+                    <Link color="text.secondary" style={{ cursor: 'pointer' }} onClick={() => scrollToSection('features')}>
                         Features
                     </Link>
-                    <Link color="text.secondary" href="#">
+                    <Link color="text.secondary" style={{ cursor: 'pointer' }} onClick={() => scrollToSection('highlights')}>
                         Highlights
                     </Link>
-                    <Link color="text.secondary" href="#">
+                    <Link color="text.secondary" style={{ cursor: 'pointer' }} onClick={() => scrollToSection('pricing')}>
                         Sign Up
                     </Link>
-                    <Link color="text.secondary" href="#">
+                    <Link color="text.secondary" style={{ cursor: 'pointer' }} onClick={() => scrollToSection('faq')}>
                         FAQs
                     </Link>
                 </Box>
