@@ -130,11 +130,6 @@ export default function Features() {
                                     '&:hover > svg': { transform: 'translateX(2px)' },
                                 }}
                             >
-                                <span>Learn more</span>
-                                <ChevronRightRoundedIcon
-                                    fontSize="small"
-                                    sx={{ mt: '1px', ml: '2px' }}
-                                />
                             </Link>
                         </Box>
                     </Box>
@@ -224,11 +219,6 @@ export default function Features() {
                                                 event.stopPropagation();
                                             }}
                                         >
-                                            <span>Learn more</span>
-                                            <ChevronRightRoundedIcon
-                                                fontSize="small"
-                                                sx={{ mt: '1px', ml: '2px' }}
-                                            />
                                         </Link>
                                     </Box>
                                 </Box>
@@ -261,6 +251,7 @@ export default function Features() {
                                     theme.palette.mode === 'light'
                                         ? items[selectedItemIndex].imageLight
                                         : items[selectedItemIndex].imageDark,
+                                borderRadius: '12px'
                             }}
                         />
                     </Card>
