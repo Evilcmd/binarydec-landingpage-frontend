@@ -92,11 +92,6 @@ function AppAppBar({ mode, toggleColorMode }) {
 
                                 alt="logo of sitemark"
                             />
-                            {/* <p
-                                style={{ fontSize: '1rem', color: 'text.primary', fontFamily: 'monospace', padding: "6px" }}
-                            >
-                                BinaryDec
-                            </p> */}
                             <Typography fontSize='1rem' fontFamily='monospace' color="text.primary" padding="6px" >
                                 BinaryDec
                             </Typography>
@@ -111,27 +106,11 @@ function AppAppBar({ mode, toggleColorMode }) {
                                     </Typography>
                                 </MenuItem>
                                 <MenuItem
-                                    onClick={() => scrollToSection('testimonials')}
-                                    sx={{ py: '6px', px: '12px' }}
-                                >
-                                    <Typography variant="body2" color="text.primary">
-                                        Testimonials
-                                    </Typography>
-                                </MenuItem>
-                                <MenuItem
                                     onClick={() => scrollToSection('highlights')}
                                     sx={{ py: '6px', px: '12px' }}
                                 >
                                     <Typography variant="body2" color="text.primary">
                                         Highlights
-                                    </Typography>
-                                </MenuItem>
-                                <MenuItem
-                                    onClick={() => scrollToSection('pricing')}
-                                    sx={{ py: '6px', px: '12px' }}
-                                >
-                                    <Typography variant="body2" color="text.primary">
-                                        Pricing
                                     </Typography>
                                 </MenuItem>
                                 <MenuItem
@@ -157,10 +136,9 @@ function AppAppBar({ mode, toggleColorMode }) {
                                 variant="contained"
                                 size="small"
                                 component="a"
-                                href="/material-ui/getting-started/templates/sign-up/"
-                                target="_blank"
+                                onClick={() => scrollToSection('pricing')}
                             >
-                                Sign up
+                                Early Sign up
                             </Button>
                         </Box>
                         <Box sx={{ display: { sm: '', md: 'none' } }}>
@@ -195,14 +173,8 @@ function AppAppBar({ mode, toggleColorMode }) {
                                     <MenuItem onClick={() => scrollToSection('features')}>
                                         Features
                                     </MenuItem>
-                                    <MenuItem onClick={() => scrollToSection('testimonials')}>
-                                        Testimonials
-                                    </MenuItem>
                                     <MenuItem onClick={() => scrollToSection('highlights')}>
                                         Highlights
-                                    </MenuItem>
-                                    <MenuItem onClick={() => scrollToSection('pricing')}>
-                                        Pricing
                                     </MenuItem>
                                     <MenuItem onClick={() => scrollToSection('faq')}>FAQ</MenuItem>
                                     <Divider />
@@ -211,8 +183,7 @@ function AppAppBar({ mode, toggleColorMode }) {
                                             color="primary"
                                             variant="contained"
                                             component="a"
-                                            href="/material-ui/getting-started/templates/sign-up/"
-                                            target="_blank"
+                                            onClick={() => scrollToSection('pricing')}
                                             sx={{ width: '100%' }}
                                         >
                                             Sign up

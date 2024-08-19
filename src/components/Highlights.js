@@ -15,39 +15,21 @@ import ThumbUpAltRoundedIcon from '@mui/icons-material/ThumbUpAltRounded';
 const items = [
     {
         icon: <SettingsSuggestRoundedIcon />,
-        title: 'Adaptable performance',
+        title: 'Project Readiness',
         description:
-            'Our product effortlessly adjusts to your needs, boosting efficiency and simplifying your tasks.',
+            'Candidates tested on real-world scenarios are more likely to be ready to jump into ongoing projects, reducing the ramp-up time needed to get them productive.',
     },
     {
         icon: <ConstructionRoundedIcon />,
-        title: 'Built to last',
+        title: 'Workplace Efficiency',
         description:
-            'Experience unmatched durability that goes above and beyond with lasting investment.',
+            'By focusing on practical skills, you can gauge how efficiently a candidate can apply their knowledge to deliver results in a real-world environment.',
     },
     {
         icon: <ThumbUpAltRoundedIcon />,
-        title: 'Great user experience',
+        title: 'Practical Relevance',
         description:
-            'Integrate our product into your routine with an intuitive and easy-to-use interface.',
-    },
-    {
-        icon: <AutoFixHighRoundedIcon />,
-        title: 'Innovative functionality',
-        description:
-            'Stay ahead with features that set new standards, addressing your evolving needs better than the rest.',
-    },
-    {
-        icon: <SupportAgentRoundedIcon />,
-        title: 'Reliable support',
-        description:
-            'Count on our responsive customer support, offering assistance that goes beyond the purchase.',
-    },
-    {
-        icon: <QueryStatsRoundedIcon />,
-        title: 'Precision in every detail',
-        description:
-            'Enjoy a meticulously crafted product where small touches make a significant impact on your overall experience.',
+            'Real-world tests assess a candidate\'s ability to solve problems they\'ll actually encounter on the job, ensuring their skills align with day-to-day tasks.',
     },
 ];
 
@@ -78,12 +60,10 @@ export default function Highlights() {
                     }}
                 >
                     <Typography component="h2" variant="h4">
-                        Highlights
+                        Why Real-World Tests Matter in Hiring
                     </Typography>
-                    <Typography variant="body1" sx={{ color: 'grey.400' }}>
-                        Explore why our product stands out: adaptability, durability,
-                        user-friendly design, and innovation. Enjoy reliable customer support and
-                        precision in every detail.
+                    <Typography variant="body1" sx={{ color: 'grey.400', fontSize: '1rem', marginTop: '1rem' }}>
+                        When hiring, it's crucial to evaluate candidates based on their ability to perform tasks they'll encounter in the workplace. Real-world tests provide a more accurate measure of a candidate's practical skills, workplace efficiency, and project readiness, ensuring they can contribute effectively from day one.
                     </Typography>
                 </Box>
                 <Grid container spacing={2.5}>
@@ -106,10 +86,10 @@ export default function Highlights() {
                             >
                                 <Box sx={{ opacity: '50%' }}>{item.icon}</Box>
                                 <div>
-                                    <Typography fontWeight="medium" gutterBottom>
+                                    <Typography fontWeight="medium" gutterBottom sx={{ fontSize: '1rem' }}>
                                         {item.title}
                                     </Typography>
-                                    <Typography variant="body2" sx={{ color: 'grey.400' }}>
+                                    <Typography variant="body2" sx={{ color: 'grey.400', fontSize: '1rem' }}>
                                         {item.description}
                                     </Typography>
                                 </div>

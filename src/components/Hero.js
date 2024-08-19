@@ -60,7 +60,7 @@ export default function Hero() {
                         color="text.secondary"
                         sx={{ alignSelf: 'center', width: { sm: '80%', md: '80%', xs: '80%', fontSize: 'clamp(0.5rem, 1.5rem, 1.5rem)' } }}
                     >
-                        Shift the focus from algorithms to Real World development tests.<br /> Test the real skills not theory
+                        Shift the focus from algorithms to Real World development tests.<br /> Evaluate practical abilities, not just theoretical knowledge
                     </Typography>
                     <Stack
                         direction={{ xs: 'column', sm: 'row' }}
