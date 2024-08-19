@@ -92,11 +92,14 @@ function AppAppBar({ mode, toggleColorMode }) {
 
                                 alt="logo of sitemark"
                             />
-                            <p
-                                style={{ fontSize: '1rem', color: 'black', fontFamily: 'monospace', padding: "6px" }}
+                            {/* <p
+                                style={{ fontSize: '1rem', color: 'text.primary', fontFamily: 'monospace', padding: "6px" }}
                             >
                                 BinaryDec
-                            </p>
+                            </p> */}
+                            <Typography fontSize='1rem' fontFamily='monospace' color="text.primary" padding="6px" >
+                                BinaryDec
+                            </Typography>
 
                             <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
                                 <MenuItem
@@ -221,7 +224,7 @@ function AppAppBar({ mode, toggleColorMode }) {
                     </Toolbar>
                 </Container>
             </AppBar>
-        </div>
+        </div >
     );
 }
 
