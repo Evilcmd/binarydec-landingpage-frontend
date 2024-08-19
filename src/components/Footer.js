@@ -17,17 +17,37 @@ const logoStyle = {
     height: 'auto',
 };
 
+
 function Copyright() {
     return (
         <Typography variant="body2" color="text.secondary" mt={1}>
             {'Copyright © '}
-            <Link href="https://mui.com/">Sitemark&nbsp;</Link>
+            <Link href="#">ByteDec&nbsp;</Link>
             {new Date().getFullYear()}
         </Typography>
     );
 }
 
 export default function Footer() {
+    const [open, setOpen] = React.useState(false);
+
+    const toggleDrawer = (newOpen) => () => {
+        setOpen(newOpen);
+    };
+    const scrollToSection = (sectionId) => {
+        const sectionElement = document.getElementById(sectionId);
+        const offset = 128;
+        if (sectionElement) {
+            const targetScroll = sectionElement.offsetTop - offset;
+            sectionElement.scrollIntoView({ behavior: 'smooth' });
+            window.scrollTo({
+                top: targetScroll,
+                behavior: 'smooth',
+            });
+            setOpen(false);
+        }
+    };
+
     return (
         <Container
             sx={{
@@ -56,15 +76,6 @@ export default function Footer() {
                     }}
                 >
                     <Box sx={{ width: { xs: '100%', sm: '60%' } }}>
-                        {/* <Box sx={{ ml: '-15px' }}>
-                            <img
-                                src={
-                                    'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12e6faf73568658154dae_SitemarkDefault.svg'
-                                }
-                                style={logoStyle}
-                                alt="logo of sitemark"
-                            />
-                        </Box> */}
                         <Typography variant="body2" fontWeight={600} gutterBottom sx={{ fontSize: '2rem' }}>
                             Contact Us
                         </Typography>
@@ -88,7 +99,7 @@ export default function Footer() {
                     <Typography variant="body2" fontWeight={600}>
                         Product
                     </Typography>
-                    <Link color="text.secondary" href="#">
+                    <Link color="text.secondary" onClick={() => scrollToSection('pricing')}>
                         Features
                     </Link>
                     <Link color="text.secondary" href="#">
@@ -129,15 +140,6 @@ export default function Footer() {
                 }}
             >
                 <div>
-                    <Link color="text.secondary" href="#">
-                        Privacy Policy
-                    </Link>
-                    <Typography display="inline" sx={{ mx: 0.5, opacity: 0.5 }}>
-                        &nbsp;•&nbsp;
-                    </Typography>
-                    <Link color="text.secondary" href="#">
-                        Terms of Service
-                    </Link>
                     <Copyright />
                 </div>
                 <Stack
@@ -151,15 +153,7 @@ export default function Footer() {
                 >
                     <IconButton
                         color="inherit"
-                        href="https://github.com/mui"
-                        aria-label="GitHub"
-                        sx={{ alignSelf: 'center' }}
-                    >
-                        <FacebookIcon />
-                    </IconButton>
-                    <IconButton
-                        color="inherit"
-                        href="https://x.com/MaterialUI"
+                        href="#"
                         aria-label="X"
                         sx={{ alignSelf: 'center' }}
                     >
@@ -167,7 +161,7 @@ export default function Footer() {
                     </IconButton>
                     <IconButton
                         color="inherit"
-                        href="https://www.linkedin.com/company/mui/"
+                        href="#"
                         aria-label="LinkedIn"
                         sx={{ alignSelf: 'center' }}
                     >
