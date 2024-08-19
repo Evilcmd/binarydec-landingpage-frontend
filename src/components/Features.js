@@ -19,32 +19,32 @@ const items = [
         title: 'Build Any Application',
         description:
             'Build real world applications on the web. Frontend, Backend, Database, Machine Learning, we got it all',
-        imageLight: 'url("/static/hero.png")',
-        imageDark: 'url("/static/hero.png")',
+        imageLight: 'url("/static/firstlight.png")',
+        imageDark: 'url("/static/firstdark.png")',
     },
     {
         icon: <EdgesensorHighRoundedIcon />,
         title: 'Automated tests',
         description:
             'We have a suite of automated tests that you can use to see if the candidate built the application according to the required specs.',
-        imageLight: 'url("/static/images/templates/templates-images/mobile-light.png")',
-        imageDark: 'url("/static/images/templates/templates-images/mobile-dark.png")',
+        imageLight: 'url("/static/secondlight.png")',
+        imageDark: 'url("/static/seconddark.png")',
     },
     {
         icon: <DevicesRoundedIcon />,
         title: 'Anti Cheat Systems',
         description:
             'We have machine learning algorithms monitoring the candidates video live to see if a candidate is truthful or cheating.',
-        imageLight: 'url("/static/images/templates/templates-images/devices-light.png")',
-        imageDark: 'url("/static/images/templates/templates-images/devices-dark.png")',
+        imageLight: 'url("/static/thirdlight.png")',
+        imageDark: 'url("/static/thirddark.png")',
     },
     {
         icon: <DevicesRoundedIcon />,
         title: 'Documentation and AI Support',
         description:
-            'We offer documentation and AI Support that can be enabled to simulate real world development enviornment.',
-        imageLight: 'url("/static/images/templates/templates-images/devices-light.png")',
-        imageDark: 'url("/static/images/templates/templates-images/devices-dark.png")',
+            'We offer documentation and AI Support that can be enabled to simulate real world development environment.',
+        imageLight: 'url("/static/fourthlight.png")',
+        imageDark: 'url("/static/fourthdark.png")',
     },
 ];
 

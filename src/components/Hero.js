@@ -9,6 +9,26 @@ import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 
 export default function Hero() {
+    const [open, setOpen] = React.useState(false);
+
+    const toggleDrawer = (newOpen) => () => {
+        setOpen(newOpen);
+    };
+
+    const scrollToSection = (sectionId) => {
+        const sectionElement = document.getElementById(sectionId);
+        const offset = 128;
+        if (sectionElement) {
+            const targetScroll = sectionElement.offsetTop - offset;
+            sectionElement.scrollIntoView({ behavior: 'smooth' });
+            window.scrollTo({
+                top: targetScroll,
+                behavior: 'smooth',
+            });
+            setOpen(false);
+        }
+    };
+
     return (
         <Box
             id="hero"
@@ -69,10 +89,10 @@ export default function Hero() {
                         useFlexGap
                         sx={{ pt: 2, width: { xs: '100%', sm: 'auto' } }}
                     >
-                        <Button variant="contained" color="primary">
+                        <Button variant="contained" color="primary" onClick={() => scrollToSection('pricing')}>
                             Early Signup
                         </Button>
-                        <Button variant="outlined" color="primary">
+                        <Button variant="outlined" color="primary" href="mailto:vivillonlabs@gmail.com">
                             Contact Us
                         </Button>
                     </Stack>

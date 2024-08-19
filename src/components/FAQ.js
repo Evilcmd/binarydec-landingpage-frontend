@@ -51,7 +51,7 @@ export default function FAQ() {
                         id="panel1d-header"
                     >
                         <Typography component="h3" variant="subtitle2">
-                            How do I contact customer support if I have a question or issue?
+                            When will the product be launched?
                         </Typography>
                     </AccordionSummary>
                     <AccordionDetails>
@@ -60,10 +60,7 @@ export default function FAQ() {
                             gutterBottom
                             sx={{ maxWidth: { sm: '100%', md: '70%' } }}
                         >
-                            You can reach our customer support team by emailing
-                            <Link> support@email.com </Link>
-                            or calling our toll-free number. We&apos;re here to assist you
-                            promptly.
+                            We're excited to announce that our product will be launching soon! We're in the final stages of development and expect to be live within the next month or two. Stay tuned for updates, and thank you for your patience as we work to deliver the best possible experience
                         </Typography>
                     </AccordionDetails>
                 </Accordion>
@@ -77,7 +74,7 @@ export default function FAQ() {
                         id="panel2d-header"
                     >
                         <Typography component="h3" variant="subtitle2">
-                            Can I return the product if it doesn&apos;t meet my expectations?
+                            Can I return the credits bought?
                         </Typography>
                     </AccordionSummary>
                     <AccordionDetails>
@@ -86,9 +83,7 @@ export default function FAQ() {
                             gutterBottom
                             sx={{ maxWidth: { sm: '100%', md: '70%' } }}
                         >
-                            Absolutely! We offer a hassle-free return policy. If you&apos;re not
-                            completely satisfied, you can return the product within [number of
-                            days] days for a full refund or exchange.
+                            Yes, we offer a full refund for any unused credits purchased, no questions asked. Your satisfaction is our priority, and we want to ensure you feel confident in your purchase.
                         </Typography>
                     </AccordionDetails>
                 </Accordion>
@@ -102,7 +97,7 @@ export default function FAQ() {
                         id="panel3d-header"
                     >
                         <Typography component="h3" variant="subtitle2">
-                            What makes your product stand out from others in the market?
+                            Is there any benefits for signing up early?
                         </Typography>
                     </AccordionSummary>
                     <AccordionDetails>
@@ -111,9 +106,7 @@ export default function FAQ() {
                             gutterBottom
                             sx={{ maxWidth: { sm: '100%', md: '70%' } }}
                         >
-                            Our product distinguishes itself through its adaptability, durability,
-                            and innovative features. We prioritize user satisfaction and
-                            continually strive to exceed expectations in every aspect.
+                            Absolutely! All users signing up in the pre launch will get 5 credits free and will also exclusive access to special offers, early-bird pricing, and priority support. Plus, you'll be the first to know about new features and updates. It's our way of thanking you for joining us on this exciting journey from the very beginning.
                         </Typography>
                     </AccordionDetails>
                 </Accordion>
@@ -127,7 +120,7 @@ export default function FAQ() {
                         id="panel4d-header"
                     >
                         <Typography component="h3" variant="subtitle2">
-                            Is there a warranty on the product, and what does it cover?
+                            Will my data be safe and secure?
                         </Typography>
                     </AccordionSummary>
                     <AccordionDetails>
@@ -136,10 +129,7 @@ export default function FAQ() {
                             gutterBottom
                             sx={{ maxWidth: { sm: '100%', md: '70%' } }}
                         >
-                            Yes, our product comes with a [length of warranty] warranty. It covers
-                            defects in materials and workmanship. If you encounter any issues
-                            covered by the warranty, please contact our customer support for
-                            assistance.
+                            Your data security is our top priority. We've implemented industry-standard security measures to ensure your information is protected. You can trust that your data will be safe with us from day one.
                         </Typography>
                     </AccordionDetails>
                 </Accordion>
