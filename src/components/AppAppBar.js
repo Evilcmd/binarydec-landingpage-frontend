@@ -85,11 +85,19 @@ function AppAppBar({ mode, toggleColorMode }) {
                         >
                             <img
                                 src={
-                                    'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12e6faf73568658154dae_SitemarkDefault.svg'
+                                    '/static/logo.png'
                                 }
-                                style={logoStyle}
+                                // style={logoStyle}
+                                style={{ width: '3rem', height: '3rem', borderRadius: '100px' }}
+
                                 alt="logo of sitemark"
                             />
+                            <p
+                                style={{ fontSize: '1rem', color: 'black', fontFamily: 'monospace', padding: "6px" }}
+                            >
+                                BinaryDec
+                            </p>
+
                             <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
                                 <MenuItem
                                     onClick={() => scrollToSection('features')}
@@ -141,16 +149,6 @@ function AppAppBar({ mode, toggleColorMode }) {
                             }}
                         >
                             <ToggleColorMode mode={mode} toggleColorMode={toggleColorMode} />
-                            <Button
-                                color="primary"
-                                variant="text"
-                                size="small"
-                                component="a"
-                                href="/material-ui/getting-started/templates/sign-in/"
-                                target="_blank"
-                            >
-                                Sign in
-                            </Button>
                             <Button
                                 color="primary"
                                 variant="contained"
@@ -215,18 +213,6 @@ function AppAppBar({ mode, toggleColorMode }) {
                                             sx={{ width: '100%' }}
                                         >
                                             Sign up
-                                        </Button>
-                                    </MenuItem>
-                                    <MenuItem>
-                                        <Button
-                                            color="primary"
-                                            variant="outlined"
-                                            component="a"
-                                            href="/material-ui/getting-started/templates/sign-in/"
-                                            target="_blank"
-                                            sx={{ width: '100%' }}
-                                        >
-                                            Sign in
                                         </Button>
                                     </MenuItem>
                                 </Box>
