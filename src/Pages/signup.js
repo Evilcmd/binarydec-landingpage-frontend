@@ -9,7 +9,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Snackbar, { SnackbarCloseReason } from '@mui/material/Snackbar';
-import  { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function Copyright(props) {
     return (
@@ -29,65 +29,65 @@ function Copyright(props) {
 const defaultTheme = createTheme();
 
 export default function SignUp() {
-  const PRE_SIGNUP_URL = 'https://binarydec-landingpage-backend.onrender.com/presignup'
+    const PRE_SIGNUP_URL = 'https://binarydec-landingpage-backend.onrender.com/presignup'
 
-    const [formData,setFormData]=React.useState({
-        name:'',
-        email:'',
-        company:'',
-      });
+    const [formData, setFormData] = React.useState({
+        name: '',
+        email: '',
+        company: '',
+    });
 
-      const [open, setOpen] = React.useState(false);
+    const [open, setOpen] = React.useState(false);
 
-    const [errors,setErrors]=React.useState({
-        nameError:'',
-        emailError:'',
-        companyError:'',
+    const [errors, setErrors] = React.useState({
+        nameError: '',
+        emailError: '',
+        companyError: '',
     })
 
     const navigate = useNavigate();
 
-    const [snackMessage,setSnackMessage]=React.useState('');
+    const [snackMessage, setSnackMessage] = React.useState('');
 
-      const handleOnChange=(event)=>{
-        
-    
+    const handleOnChange = (event) => {
+
+
         setFormData({
             ...formData,
-            [event.target.name]:event.target.value,
+            [event.target.name]: event.target.value,
         });
-      };
+    };
 
-    const validate=()=>{
+    const validate = () => {
         let isValid = true;
-        
-        let errors={
-           
+
+        let errors = {
+
         };
 
         let nameField = formData['name'];
         let emailField = formData['email'];
         let companyField = formData['company'];
 
-        if(!nameField.length){
-            errors.nameError='Name is required';
-            isValid=false;
-        }else{
-            if(nameField.length<3){
-                errors.nameError='Length should atleast 3';
-                isValid=false;
+        if (!nameField.length) {
+            errors.nameError = 'Name is required';
+            isValid = false;
+        } else {
+            if (nameField.length < 3) {
+                errors.nameError = 'Length should atleast 3';
+                isValid = false;
             }
         }
 
-        if(!emailField.length){
-            errors.emailError='Email is required';
+        if (!emailField.length) {
+            errors.emailError = 'Email is required';
             isValid = false;
-        }else if(!/\S+@\S+\.\S+/.test(emailField)){
-            errors.emailError='Email is invalid';
+        } else if (!/\S+@\S+\.\S+/.test(emailField)) {
+            errors.emailError = 'Email is invalid';
             isValid = false;
         }
 
-        if(!companyField.length){
+        if (!companyField.length) {
             errors.companyError = 'Company-name is required';
             isValid = false;
         }
@@ -99,81 +99,81 @@ export default function SignUp() {
     const handleClose = (
         event,
         reason,
-      ) => {
+    ) => {
         if (reason === 'clickaway') {
-          return;
-        }
-    
-        setOpen(false);
-      };
-
-    const handleSubmit = async(event) => {
-        event.preventDefault();
-        const data = new FormData(event.currentTarget);
-
-        if(!validate()){
             return;
         }
 
-        try{
-            const response = await fetch(PRE_SIGNUP_URL,{
-              method:'POST',
-              headers:{
-                'Content-Type':'application/json',
-              },
-              body:JSON.stringify(
-                {
-                  "name":formData['name'],
-                  "email":formData['email'],
-                  "company":formData['company'],
-                })
+        setOpen(false);
+    };
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        const data = new FormData(event.currentTarget);
+
+        if (!validate()) {
+            return;
+        }
+
+        try {
+            const response = await fetch(PRE_SIGNUP_URL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(
+                    {
+                        "name": formData['name'],
+                        "email": formData['email'],
+                        "company": formData['company'],
+                    })
             });
-      
+
             console.log(response);
-            if(!response.ok){
-              
-            //   alert(`User-${formData['name']} already exists!`);
+            if (!response.ok) {
+
+                //   alert(`User-${formData['name']} already exists!`);
                 setSnackMessage(`User-${formData['name']} already exists!`);
                 setOpen(true);
 
-              return;
-      
+                return;
+
             }
-      
+
             const data = response.json()
-            
+
 
             data
-            .then(
-              (value)=>{
-                console.log(value);
-                setSnackMessage("Signed-up successfully !");
-                setOpen(true);
+                .then(
+                    (value) => {
+                        console.log(value);
+                        setSnackMessage("Signed-up successfully !");
+                        setOpen(true);
 
-                setTimeout(() => {
-                    navigate('/');
-                }, 1500);
-            }
-            )
-            .catch(
-              (error)=>{
-                // alert(error);
-                setSnackMessage(error)
-                setOpen(true);
-            }
-            );
-      
-      
-          }catch(error){
+                        setTimeout(() => {
+                            navigate('/');
+                        }, 1500);
+                    }
+                )
+                .catch(
+                    (error) => {
+                        // alert(error);
+                        setSnackMessage(error)
+                        setOpen(true);
+                    }
+                );
+
+
+        } catch (error) {
             // alert(error)
             setSnackMessage(error);
             setOpen(true);
 
-            
-          }finally{
-      
+
+        } finally {
+
             //empty the fields when the entry is done
-          }
+        }
 
     };
 
@@ -258,10 +258,10 @@ export default function SignUp() {
                         </Button>
 
                         <Snackbar
-                                open={open}
-                                autoHideDuration={1500}
-                                onClose={handleClose}
-                                message={snackMessage}
+                            open={open}
+                            autoHideDuration={1500}
+                            onClose={handleClose}
+                            message={snackMessage}
                         />
                     </Box>
                 </Box>
