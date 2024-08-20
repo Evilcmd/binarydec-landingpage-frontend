@@ -7,7 +7,6 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
 export default function Hero() {
-    const [open, setOpen] = React.useState(false);
 
     const scrollToSection = (sectionId) => {
         const sectionElement = document.getElementById(sectionId);

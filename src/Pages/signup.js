@@ -8,7 +8,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import Snackbar, { SnackbarCloseReason } from '@mui/material/Snackbar';
+import Snackbar from '@mui/material/Snackbar';
 import { useNavigate } from 'react-router-dom';
 
 function Copyright(props) {
@@ -109,7 +109,6 @@ export default function SignUp() {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        const data = new FormData(event.currentTarget);
 
         if (!validate()) {
             return;
@@ -190,7 +189,7 @@ export default function SignUp() {
                         alignItems: 'center',
                     }}
                 >
-                    <img src='/static/binary-dec-updated.png' width='100rem' height='100rem' />
+                    <img src='/static/binary-dec-updated.png' width='100rem' height='100rem' alt='logo' />
                     <Typography component="h1" variant="h5">
                         Sign up
                     </Typography>

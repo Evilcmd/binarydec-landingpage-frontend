@@ -13,11 +13,6 @@ import Drawer from '@mui/material/Drawer';
 import MenuIcon from '@mui/icons-material/Menu';
 import ToggleColorMode from './ToggleColorMode';
 
-const logoStyle = {
-    width: '140px',
-    height: 'auto',
-    cursor: 'pointer',
-};
 
 function AppAppBar({ mode, toggleColorMode }) {
     const [open, setOpen] = React.useState(false);
