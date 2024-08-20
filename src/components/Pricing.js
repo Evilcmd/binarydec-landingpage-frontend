@@ -109,6 +109,7 @@ export default function Pricing() {
                                 flexDirection: 'column',
                                 gap: 4,
                                 border: tier.title === 'Professional' ? '4px solid' : '3px solid',
+                                
                                 borderColor:
                                     tier.title === 'Professional' ? 'white' : 'grey',
                                 background:

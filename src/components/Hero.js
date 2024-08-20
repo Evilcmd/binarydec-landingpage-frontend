@@ -106,11 +106,11 @@ export default function Hero() {
                         width: '100%',
                         backgroundImage:
                             theme.palette.mode === 'light'
-                                ? 'url("/static/hero.png")'
-                                : 'url("/static/hero.png")',
+                                ? 'url("/static/lightCodeTheme.jpg")'
+                                : 'url("/static/darkCodeTheme.jpg")',
                         backgroundSize: 'cover',
                         borderRadius: '10px',
-                        outline: '1px solid',
+                        outline: '3px solid',
                         outlineColor:
                             theme.palette.mode === 'light'
                                 ? alpha('#BFCCD9', 0.5)
