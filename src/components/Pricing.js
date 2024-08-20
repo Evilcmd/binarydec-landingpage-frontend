@@ -108,13 +108,14 @@ export default function Pricing() {
                                 display: 'flex',
                                 flexDirection: 'column',
                                 gap: 4,
-                                border: tier.title === 'Professional' ? '1px solid' : undefined,
+                                border: tier.title === 'Professional' ? '4px solid' : '3px solid',
                                 borderColor:
-                                    tier.title === 'Professional' ? 'primary.main' : undefined,
+                                    tier.title === 'Professional' ? 'white' : 'grey',
                                 background:
                                     tier.title === 'Professional'
                                         ? 'linear-gradient(#033363, #021F3B)'
                                         : undefined,
+                                        
                             }}
                         >
                             <CardContent>
