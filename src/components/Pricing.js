@@ -62,6 +62,10 @@ const tiers = [
 ];
 
 export default function Pricing() {
+
+  
+
+  
     return (
         <Container
             id="pricing"
