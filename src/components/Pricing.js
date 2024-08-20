@@ -64,7 +64,7 @@ const tiers = [
 export default function Pricing() {
 
 
-  
+
     return (
         <Container
             id="pricing"
@@ -107,15 +107,15 @@ export default function Pricing() {
                                 display: 'flex',
                                 flexDirection: 'column',
                                 gap: 4,
-                                border: tier.title === 'Professional' ? '4px solid' : '3px solid',
-                                
+                                border: tier.title === 'Bundle' ? '1px solid' : '1px solid',
+
                                 borderColor:
-                                    tier.title === 'Professional' ? 'white' : 'grey',
-                                background:
-                                    tier.title === 'Professional'
-                                        ? 'linear-gradient(#033363, #021F3B)'
-                                        : undefined,
-                                        
+                                    tier.title === 'Bundle' ? 'grey' : 'grey',
+                                // background:
+                                //     tier.title === 'Bundle'
+                                //         ? 'linear-gradient(#033363, #021F3B)'
+                                //         : undefined,
+
                             }}
                         >
                             <CardContent>
@@ -217,7 +217,7 @@ export default function Pricing() {
                                     href={tier.href}
                                     target="_blank"
                                     sx={{
-                                        border:'3px solid',
+                                        border: '2px solid',
                                     }}
                                 >
                                     {tier.buttonText}
