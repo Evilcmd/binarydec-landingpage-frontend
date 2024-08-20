@@ -14,43 +14,50 @@ import CheckCircleRoundedIcon from '@mui/icons-material/CheckCircleRounded';
 
 const tiers = [
     {
-        title: 'Free',
-        price: '0',
+        title: 'Sign up',
+        price: '',
+        pricedesc: '',
         description: [
-            '10 users included',
-            '2 GB of storage',
-            'Help center access',
-            'Email support',
+            '5 credits included',
+            'Early Bird Pricing',
+            'Priority Support',
+            'Exclusive offers',
         ],
-        buttonText: 'Sign up for free',
+        buttonText: 'Sign up for Early Access',
         buttonVariant: 'outlined',
+        href: '/signup'
     },
     {
-        title: 'Professional',
+        title: 'Bundle',
         subheader: 'Recommended',
-        price: '15',
+        oldprice: '100',
+        price: '50',
+        pricedesc: 'for 12 credits',
         description: [
-            '20 users included',
-            '10 GB of storage',
+            '12 credits',
+            'Early Bird Pricing',
             'Help center access',
-            'Priority email support',
-            'Dedicated team',
-            'Best deals',
+            'Priority Support',
+            'Exclusive offers',
         ],
-        buttonText: 'Start now',
-        buttonVariant: 'contained',
+        buttonText: 'Buy Now',
+        buttonVariant: 'outlined',
+        href: '/checkout'
     },
     {
-        title: 'Enterprise',
-        price: '30',
+        title: 'Buy Credits',
+        oldprice: '10',
+        price: '5',
+        pricedesc: 'for 1 credit',
         description: [
-            '50 users included',
-            '30 GB of storage',
+            '1 credit',
+            'Early Bird Pricing',
             'Help center access',
-            'Phone & email support',
+            'Priority Support',
         ],
-        buttonText: 'Contact us',
+        buttonText: 'Buy Now',
         buttonVariant: 'outlined',
+        href: '/checkout'
     },
 ];
 
@@ -74,14 +81,12 @@ export default function Pricing() {
                     textAlign: { sm: 'left', md: 'center' },
                 }}
             >
-                <Typography component="h2" variant="h4" color="text.primary">
-                    Pricing
+                <Typography component="h2" variant="h4" color="text.primary" style={{ fontSize: '3.5rem' }}>
+                    Pre Launch Offer
                 </Typography>
-                <Typography variant="body1" color="text.secondary">
-                    Quickly build an effective pricing table for your potential customers with
-                    this layout. <br />
-                    It&apos;s built with default Material UI components with little
-                    customization.
+                <Typography variant="body1" color="text.secondary" style={{ fontSize: '1.5rem' }}>
+                    You can buy credits (1 credit = 1 test) at a massive discount as part of our pre launch offer<br />
+                    All users signing up in the pre launch will get 5 credits free and exclusive access to special offers, early-bird pricing, and priority support.
                 </Typography>
             </Box>
             <Grid container spacing={3} alignItems="center" justifyContent="center">
@@ -121,7 +126,7 @@ export default function Pricing() {
                                     <Typography component="h3" variant="h6">
                                         {tier.title}
                                     </Typography>
-                                    {tier.title === 'Professional' && (
+                                    {tier.title === 'Bundle' && (
                                         <Chip
                                             icon={<AutoAwesomeIcon />}
                                             label={tier.subheader}
@@ -140,20 +145,26 @@ export default function Pricing() {
                                         />
                                     )}
                                 </Box>
-                                <Box
-                                    sx={{
-                                        display: 'flex',
-                                        alignItems: 'baseline',
-                                        color: tier.title === 'Professional' ? 'grey.50' : undefined,
-                                    }}
-                                >
-                                    <Typography component="h3" variant="h2">
-                                        ${tier.price}
-                                    </Typography>
-                                    <Typography component="h3" variant="h6">
-                                        &nbsp; per month
-                                    </Typography>
-                                </Box>
+                                {tier.price != '' ? (
+
+                                    <Box
+                                        sx={{
+                                            display: 'flex',
+                                            alignItems: 'baseline',
+                                            color: tier.title === 'Professional' ? 'grey.50' : undefined,
+                                        }}
+                                    >
+                                        <Typography component="h3" variant="h6" style={{ textDecoration: 'line-through' }}>
+                                            ${tier.oldprice}
+                                        </Typography>
+                                        <Typography component="h3" variant="h2">
+                                            &nbsp;${tier.price}
+                                        </Typography>
+                                        <Typography component="h3" variant="h6">
+                                            &nbsp; {tier.pricedesc}
+                                        </Typography>
+                                    </Box>
+                                ) : <></>}
                                 <Divider
                                     sx={{
                                         my: 2,
@@ -198,7 +209,7 @@ export default function Pricing() {
                                     fullWidth
                                     variant={tier.buttonVariant}
                                     component="a"
-                                    href="/material-ui/getting-started/templates/checkout/"
+                                    href={tier.href}
                                     target="_blank"
                                 >
                                     {tier.buttonText}
