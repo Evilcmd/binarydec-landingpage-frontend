@@ -13,7 +13,7 @@ import Footer from './components/Footer';
 import getLPTheme from './getLPTheme';
 
 export default function LandingPage() {
-    const [mode, setMode] = React.useState('light');
+    const [mode, setMode] = React.useState('dark');
     const LPtheme = createTheme(getLPTheme(mode));
 
     const toggleColorMode = () => {
