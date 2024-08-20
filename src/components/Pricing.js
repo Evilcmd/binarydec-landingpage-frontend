@@ -63,7 +63,6 @@ const tiers = [
 
 export default function Pricing() {
 
-  
 
   
     return (
@@ -217,6 +216,9 @@ export default function Pricing() {
                                     component="a"
                                     href={tier.href}
                                     target="_blank"
+                                    sx={{
+                                        border:'3px solid',
+                                    }}
                                 >
                                     {tier.buttonText}
                                 </Button>
