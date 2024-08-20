@@ -146,10 +146,10 @@ export default function Pricing() {
                                             display: "flex",
                                             justifyContent: "center",
                                             width: "100%",
-                                            fontSize: tier.title == "Sign up" ? "2.4rem" : "1.5rem",
+                                            fontSize: tier.title === "Sign up" ? "2.4rem" : "1.5rem",
                                         }}
                                     >
-                                        {tier.title != "Sign up" ? "Subscription" : tier.title}
+                                        {tier.title !== "Sign up" ? "Subscription" : tier.title}
                                     </Typography>
                                     {tier.title === "Sign up" && (
                                         <Chip
@@ -179,7 +179,7 @@ export default function Pricing() {
                                             tier.title === "Professional" ? "grey.50" : undefined,
                                     }}
                                 >
-                                    {tier.title != "Sign up" ? (
+                                    {tier.title !== "Sign up" ? (
                                         <Typography
                                             component="h3"
                                             variant="h6"
@@ -239,7 +239,7 @@ export default function Pricing() {
                                 ))}
                             </CardContent>
                             <CardActions>
-                                {tier.title == "Sign up" ? (
+                                {tier.title === "Sign up" ? (
                                     <Button
                                         fullWidth
                                         variant={tier.buttonVariant}
