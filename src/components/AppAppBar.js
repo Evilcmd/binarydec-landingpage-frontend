@@ -85,7 +85,7 @@ function AppAppBar({ mode, toggleColorMode }) {
                         >
                             <img
                                 src={
-                                    '/static/logo.png'
+                                    '/static/binary-dec-updated.png'
                                 }
                                 // style={logoStyle}
                                 style={{ width: '3rem', height: '3rem', borderRadius: '100px' }}

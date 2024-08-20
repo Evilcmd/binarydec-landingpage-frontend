@@ -190,7 +190,7 @@ export default function SignUp() {
                         alignItems: 'center',
                     }}
                 >
-                    <img src='/static/logo.png' width='100rem' height='100rem' />
+                    <img src='/static/binary-dec-updated.png' width='100rem' height='100rem' />
                     <Typography component="h1" variant="h5">
                         Sign up
                     </Typography>
