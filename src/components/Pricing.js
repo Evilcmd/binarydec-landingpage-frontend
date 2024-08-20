@@ -110,6 +110,9 @@ export default function Pricing() {
     },
   };
 
+
+  const PRE_SIGNUP_URL = 'http://localhost:8080/presignup'
+
   //state management stuffs
   const [formData,setFormData]=React.useState({
     name:'',
@@ -119,11 +122,66 @@ export default function Pricing() {
 
 
   const handleSubmit=async(event)=>{
-    // event.preventDefault();
-    alert(formData);    
+    event.preventDefault();
+    
+    const nameSubmit = formData['name'];
+    const emailSubmit = formData['email'];
+    const feedbackSubmit = formData['feedback'];
+
+    setFormData({
+      name:'',
+      email:'',
+      feedback:'',
+    })
+
+    try{
+      const response = await fetch(PRE_SIGNUP_URL,{
+        method:'POST',
+        headers:{
+          'Content-Type':'application/json',
+        },
+        body:JSON.stringify(
+          {
+            "name":nameSubmit,
+            "email":emailSubmit,
+            "company":feedbackSubmit.length==0 ? '' : feedbackSubmit
+          })
+      });
+
+
+      if(!response.ok){
+        
+        alert(`User-${nameSubmit} already exists!`);
+        return;
+
+      }
+
+      const data = response.json()
+      data
+      .then(
+        (value)=>{alert("Pre-signed successfully !");
+          console.log(value);}
+      )
+      .catch(
+        (error)=>alert(error)
+      );
+
+
+    }catch(error){
+      alert(error)
+
+    }finally{
+
+      //empty the fields when the entry is done
+      setFormData({name:'',email:'',feedback:'',errors:{}});
+    }
+
 };
 
   const handleOnChange=(event)=>{
+    console.log(`target->${event.target.value}`);
+    console.log(`name->${event.target.name}`);
+
     setFormData({
         ...formData,
         [event.target.name]:event.target.value,
@@ -161,17 +219,21 @@ export default function Pricing() {
                 borderRadius:'1rem',
                 background:'linear-gradient(#033363, #021F3B)',
                 padding:'1.5rem',
+                // width:'85%',
+                marginBottom:'3rem',
+
+                // width:'85%',
                 "@media(min-width:992px)": {
-                    width:"25%",
+                    width:"85%",
                 },
-                "@media(min-width:768px)":{
-                    width:'75%',
-                    marginBottom:'3rem',
-                },
-                "@media(min-width:576px)":{
-                    width:'80%',
-                    marginBottom:'3rem',
-                },
+                // "@media(min-width:768px)":{
+                   
+                //     marginBottom:'3rem',
+                // },
+                // "@media(min-width:576px)":{
+                //     width:'30%',
+                //     marginBottom:'3rem',
+                // },
                }}
         >
             <div>
@@ -194,65 +256,71 @@ export default function Pricing() {
                 onSubmit={handleSubmit}
 
                 style={formStyle}>
-                {/* name field  */}
-                <div style={divlabelTextStyle}>
-                    <label htmlFor="name" style={textFieldStyle}>
-                    Name
-                    </label>
-                    <input
-                    type="text"
-                    id="name"
-                    placeholder="David Bechkam"
-                    min={3}
-                    value={formData.name}
-                    onChange={handleOnChange}
-                    maxLength={100}
-                    required
-                    name="name"
-                    style={nameFieldStyle}
-                    />
-                </div>
+                              {/* name field  */}
+                              <div style={divlabelTextStyle}>
+                                  <label htmlFor="name" style={textFieldStyle}>
+                                  Name
+                                  </label>
+                                  <input
+                                  type="text"
+                                  id="name"
+                                  placeholder="David Bechkam"
+                                  min={3}
+                                  value={formData.name}
+                                  onChange={handleOnChange}
+                                  maxLength={100}
+                                  required
+                                  name="name"
+                                  style={nameFieldStyle}
+                                  />
+                              </div>
 
-                {/* email field  */}
-                <div style={divlabelTextStyle}>
-                    <label htmlFor="email" style={textFieldStyle}>
-                    Email
-                    </label>
-                    <input
-                    type="email"
-                    id="email"
-                    placeholder="David123@droppins.com"
-                    name="email"
-                    style={emailFieldStyle}
-                    required
-                    />
-                </div>
+                              {/* email field  */}
+                              <div style={divlabelTextStyle}>
+                                  <label htmlFor="email" style={textFieldStyle}>
+                                  Email
+                                  </label>
+                                  <input
+                                  type="email"
+                                  id="email"
+                                  value={formData.email}
+                                  onChange={handleOnChange}
+                                  placeholder="David123@droppins.com"
+                                  name="email"
+                                  style={emailFieldStyle}
+                                  required
+                                  />
+                              </div>
 
-                {/* feedback text  */}
-                <div style={divlabelTextStyle}>
-                    <label style={textFieldStyle}>Feedback</label>
-                    <textarea
-                    id="feedback"
-                    name="feedback"
-                    maxLength={256}
-                    placeholder="Feedback goes here..."
-                    rows={5}
-                    style={feedbackFieldStyle}
-                    />
-                </div>
+                              {/* feedback text  */}
+                              <div style={divlabelTextStyle}>
+                                  <label style={textFieldStyle}>Feedback</label>
+                                      <textarea
+                                          id="feedback"
+                                          name="feedback"
+                                          maxLength={256}
+                                          placeholder="Feedback goes here..."
+                                          rows={5}
+                                          style={feedbackFieldStyle}
+                                          value={formData.feedback}
+                                          onChange={handleOnChange}
+                                      />
+                              </div>
+
+                              <div 
+                              style={{
+                                  display:'flex',
+                                  justifyContent:'center',
+                                  alignItems:'center',
+                              }}>
+                                  <button style={preSignUpBtnStyle} type="submit">
+                                      Pre-Sign
+                                  </button>
+                              </div>
                 </form>
             </div>
 
-                <div 
-                style={{
-                    display:'flex',
-                    justifyContent:'center',
-                    alignItems:'center',
-                }}>
-                    <button style={preSignUpBtnStyle} type="submit">
-                        Pre-Sign
-                    </button>
-                </div>
+                
         </div>
 
         <div
@@ -263,17 +331,20 @@ export default function Pricing() {
                 borderRadius:'1rem',
                 background:'linear-gradient(#033363, #021F3B)',
                 padding:'1.5rem',
+                marginBottom:'3rem',
+
+                // width:'85%',
                 "@media(min-width:992px)": {
-                    width:"25%",
+                    width:"85%",
                 },
-                "@media(min-width:768px)":{
-                    width:'75%',
-                    marginBottom:'3rem',
-                },
-                "@media(min-width:576px)":{
-                    width:'80%',
-                    marginBottom:'3rem',
-                },
+                // "@media(min-width:768px)":{
+                //     width:'75%',
+                //     marginBottom:'3rem',
+                // },
+                // "@media(min-width:576px)":{
+                //     width:'80%',
+                //     marginBottom:'3rem',
+                // },
                
                }}
         >
