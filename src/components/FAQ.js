@@ -57,7 +57,7 @@ export default function FAQ() {
                         <Typography
                             variant="body2"
                             gutterBottom
-                            sx={{ maxWidth: { sm: '100%', md: '70%', fontSize: '1rem' } }}
+                            sx={{ maxWidth: { sm: '100%', md: '70%', fontSize: '1rem', textAlign: 'justify' } }}
                         >
                             We're excited to announce that our product will be launching soon! We're in the final stages of development and expect to be live within the next month or two. Stay tuned for updates, and thank you for your patience as we work to deliver the best possible experience
                         </Typography>
@@ -80,7 +80,7 @@ export default function FAQ() {
                         <Typography
                             variant="body2"
                             gutterBottom
-                            sx={{ maxWidth: { sm: '100%', md: '70%', fontSize: '1rem' } }}
+                            sx={{ maxWidth: { sm: '100%', md: '70%', fontSize: '1rem', textAlign: 'justify' } }}
                         >
                             Yes, we offer a full refund for any unused credits purchased, no questions asked. Your satisfaction is our priority, and we want to ensure you feel confident in your purchase.
                         </Typography>
@@ -103,7 +103,7 @@ export default function FAQ() {
                         <Typography
                             variant="body2"
                             gutterBottom
-                            sx={{ maxWidth: { sm: '100%', md: '70%', fontSize: '1rem' } }}
+                            sx={{ maxWidth: { sm: '100%', md: '70%', fontSize: '1rem', textAlign: 'justify' } }}
                         >
                             Absolutely! All users signing up in the pre launch will get 5 credits free and will also exclusive access to special offers, early-bird pricing, and priority support. Plus, you'll be the first to know about new features and updates. It's our way of thanking you for joining us on this exciting journey from the very beginning.
                         </Typography>
@@ -126,7 +126,7 @@ export default function FAQ() {
                         <Typography
                             variant="body2"
                             gutterBottom
-                            sx={{ maxWidth: { sm: '100%', md: '70%', fontSize: '1rem' } }}
+                            sx={{ maxWidth: { sm: '100%', md: '70%', fontSize: '1rem', textAlign: 'justify' } }}
                         >
                             Your data security is our top priority. We've implemented industry-standard security measures to ensure your information is protected. You can trust that your data will be safe with us from day one.
                         </Typography>
