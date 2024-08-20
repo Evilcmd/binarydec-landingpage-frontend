@@ -132,7 +132,7 @@ export default function SignUp() {
             if (!response.ok) {
 
                 //   alert(`User-${formData['name']} already exists!`);
-                setSnackMessage(`User-${formData['name']} already exists!`);
+                setSnackMessage(`Email - ${formData['email']} already exists!`);
                 setOpen(true);
 
                 return;
