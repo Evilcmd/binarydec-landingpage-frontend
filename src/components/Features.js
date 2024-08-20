@@ -99,6 +99,7 @@ export default function Features() {
                         sx={{
                             display: { xs: 'auto', sm: 'none' },
                             mt: 4,
+                           
                         }}
                     >
                         <Box
@@ -110,9 +111,10 @@ export default function Features() {
                                 backgroundSize: 'cover',
                                 backgroundPosition: 'center',
                                 minHeight: 280,
+                               
                             }}
                         />
-                        <Box sx={{ px: 2, pb: 2 }}>
+                        <Box sx={{ px: 2, pb: 2 ,}}>
                             <Typography color="text.primary" variant="body2" fontWeight="bold">
                                 {selectedFeature.title}
                             </Typography>
@@ -139,7 +141,9 @@ export default function Features() {
                         alignItems="flex-start"
                         spacing={2}
                         useFlexGap
-                        sx={{ width: '100%', display: { xs: 'none', sm: 'flex' } }}
+                        sx={{ width: '100%', display: { xs: 'none', sm: 'flex' },
+                                
+                         }}
                     >
                         {items.map(({ icon, title, description }, index) => (
                             <Card
@@ -154,6 +158,7 @@ export default function Features() {
                                     background: 'none',
                                     backgroundColor:
                                         selectedItemIndex === index ? 'action.selected' : undefined,
+                                    
                                     borderColor: (theme) => {
                                         if (theme.palette.mode === 'light') {
                                             return selectedItemIndex === index
@@ -162,6 +167,7 @@ export default function Features() {
                                         }
                                         return selectedItemIndex === index ? 'primary.dark' : 'grey.800';
                                     },
+                                    
                                 }}
                             >
                                 <Box
@@ -172,6 +178,7 @@ export default function Features() {
                                         flexDirection: { xs: 'column', md: 'row' },
                                         alignItems: { md: 'center' },
                                         gap: 2.5,
+                    
                                     }}
                                 >
                                     <Box
