@@ -96,7 +96,7 @@ export default function Pricing() {
           color="text.secondary"
           style={{ fontSize: "1.5rem" }}
         >
-          You can buy credits (1 credit = 1 test) at a massive discount as part
+          You can buy credits at a massive discount as part
           of our pre launch offer
           <br />
           All users signing up in the pre launch will get 5 credits free and
