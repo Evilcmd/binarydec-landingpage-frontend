@@ -30,7 +30,6 @@ export default function Footer() {
                 top: targetScroll,
                 behavior: 'smooth',
             });
-            setOpen(false);
         }
     };
 

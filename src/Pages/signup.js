@@ -58,7 +58,7 @@ export default function SignUp() {
         });
     };
 
-    const validate = () => {
+    const validateInput = () => {
         let isValid = true;
 
         let errors = {
@@ -110,7 +110,7 @@ export default function SignUp() {
     const handleSubmit = async (event) => {
         event.preventDefault();
 
-        if (!validate()) {
+        if (!validateInput()) {
             return;
         }
 
@@ -193,7 +193,7 @@ export default function SignUp() {
                     <Typography component="h1" variant="h5">
                         Sign up
                     </Typography>
-                    <Box component="form" validate onSubmit={handleSubmit} sx={{ mt: 3 }}>
+                    <Box component="form" validate="true" onSubmit={handleSubmit} sx={{ mt: 3 }}>
                         <Grid container spacing={2}>
                             <Grid item xs={12}>
 

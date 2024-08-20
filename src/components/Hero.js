@@ -18,7 +18,6 @@ export default function Hero() {
                 top: targetScroll,
                 behavior: 'smooth',
             });
-            setOpen(false);
         }
     };
 
