@@ -146,7 +146,7 @@ export default function Pricing() {
                       display: "flex",
                       justifyContent: "center",
                       width: "100%",
-                      fontSize: tier.title == "Sign up" ? "2.4rem" : "",
+                      fontSize: tier.title == "Sign up" ? "2.4rem" : "1.5rem",
                     }}
                   >
                     {tier.title != "Sign up" ? "Subscription" : tier.title}
