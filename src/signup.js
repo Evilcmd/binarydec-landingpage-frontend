@@ -29,7 +29,7 @@ function Copyright(props) {
 const defaultTheme = createTheme();
 
 export default function SignUp() {
-  const PRE_SIGNUP_URL = 'http://localhost:8080/presignup'
+  const PRE_SIGNUP_URL = 'https://binarydec-landingpage-backend.onrender.com/presignup'
 
     const [formData,setFormData]=React.useState({
         name:'',
@@ -129,7 +129,7 @@ export default function SignUp() {
                 })
             });
       
-      
+            console.log(response);
             if(!response.ok){
               
             //   alert(`User-${formData['name']} already exists!`);
