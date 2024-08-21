@@ -228,4 +228,4 @@ export default function Pricing() {
             </Grid>
         </Container>
     );
-}
+  }

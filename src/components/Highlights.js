@@ -18,13 +18,13 @@ const items = [
     },
     {
         icon: <ConstructionRoundedIcon />,
-        title: 'Linked List ',
+        title: 'Evaluate problem-solving skills of a candidate by immersing them in realistic, job-like scenarios that closely mimic the actual challenges they\'ll face in the role.',
         description:
             'By focusing on practical skills, you can gauge how efficiently a candidate can apply their knowledge to deliver results in a real-world environment.',
     },
     {
         icon: <ThumbUpAltRoundedIcon />,
-        title: 'Practical Relevance',
+        title: 'Assess their skills by seeing how they tackle and complete real-world projects, showcasing their practical expertise and problem-solving abilities.',
         description:
             'Real-world tests assess a candidate\'s ability to solve problems they\'ll actually encounter on the job, ensuring their skills align with day-to-day tasks.',
     },
@@ -80,7 +80,7 @@ export default function Highlights() {
                             >
                                 <Box sx={{ opacity: '50%' }}>{item.icon}</Box>
                                 <div>
-                                    <Typography fontWeight="medium" gutterBottom sx={{ fontSize: '2rem' }}>
+                                    <Typography fontWeight="medium" gutterBottom sx={{ fontSize: '1.25rem' }}>
                                         {item.title}
                                     </Typography>
                                     {/* <Typography variant="body2" sx={{ color: 'grey.400', fontSize: '1rem' }}>
