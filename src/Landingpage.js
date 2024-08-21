@@ -11,6 +11,7 @@ import Features from './components/Features';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import getLPTheme from './getLPTheme';
+import BasicTable from './components/Table';
 
 export default function LandingPage() {
     const [mode, setMode] = React.useState('dark');
@@ -34,6 +35,8 @@ export default function LandingPage() {
                 <Highlights />
                 <Divider />
                 <Pricing />
+                <Divider />
+                <BasicTable />
                 <Divider />
                 <FAQ />
                 <Divider />

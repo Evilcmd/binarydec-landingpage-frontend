@@ -12,13 +12,13 @@ import ThumbUpAltRoundedIcon from '@mui/icons-material/ThumbUpAltRounded';
 const items = [
     {
         icon: <SettingsSuggestRoundedIcon />,
-        title: 'Project Readiness',
+        title: 'Hire Production Ready Engineers Who Transform Ideas into Impactful Solutions',
         description:
             'Candidates tested on real-world scenarios are more likely to be ready to jump into ongoing projects, reducing the ramp-up time needed to get them productive.',
     },
     {
         icon: <ConstructionRoundedIcon />,
-        title: 'Workplace Efficiency',
+        title: 'Linked List ',
         description:
             'By focusing on practical skills, you can gauge how efficiently a candidate can apply their knowledge to deliver results in a real-world environment.',
     },
@@ -56,11 +56,8 @@ export default function Highlights() {
                         textAlign: { sm: 'left', md: 'center' },
                     }}
                 >
-                    <Typography component="h2" variant="h4">
+                    <Typography component="h2" variant="h4" sx={{ fontSize: "clamp(2.5rem, 10vw, 4rem)" }}>
                         Why Real-World Tests Matter in Hiring
-                    </Typography>
-                    <Typography variant="body1" sx={{ color: 'grey.400', fontSize: '1rem', marginTop: '1rem' }}>
-                        When hiring, it's crucial to evaluate candidates based on their ability to perform tasks they'll encounter in the workplace. Real-world tests provide a more accurate measure of a candidate's practical skills, workplace efficiency, and project readiness, ensuring they can contribute effectively from day one.
                     </Typography>
                 </Box>
                 <Grid container spacing={2.5}>
@@ -83,12 +80,12 @@ export default function Highlights() {
                             >
                                 <Box sx={{ opacity: '50%' }}>{item.icon}</Box>
                                 <div>
-                                    <Typography fontWeight="medium" gutterBottom sx={{ fontSize: '1rem' }}>
+                                    <Typography fontWeight="medium" gutterBottom sx={{ fontSize: '2rem' }}>
                                         {item.title}
                                     </Typography>
-                                    <Typography variant="body2" sx={{ color: 'grey.400', fontSize: '1rem' }}>
+                                    {/* <Typography variant="body2" sx={{ color: 'grey.400', fontSize: '1rem' }}>
                                         {item.description}
-                                    </Typography>
+                                    </Typography> */}
                                 </div>
                             </Stack>
                         </Grid>

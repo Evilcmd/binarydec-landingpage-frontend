@@ -48,31 +48,24 @@ export default function Hero() {
                         variant="h1"
                         sx={{
                             display: 'flex',
-                            flexDirection: { xs: 'column', md: 'row' },
+                            flexDirection: { xs: 'column', md: 'column' },
                             alignSelf: 'center',
                             textAlign: 'center',
-                            fontSize: 'clamp(3.5rem, 10vw, 4rem)',
+                            fontSize: 'clamp(2.8rem, 10vw, 4rem)',
                         }}
                     >
-                        Modernizing&nbsp;
+                        Im a fan of deadpool but im also a fan of&nbsp;
                         <Typography
                             component="span"
                             variant="h1"
                             sx={{
-                                fontSize: 'clamp(3rem, 10vw, 4rem)',
+                                fontSize: 'clamp(2.8rem, 10vw, 4rem)',
                                 color: (theme) =>
                                     theme.palette.mode === 'light' ? 'primary.main' : 'primary.light',
                             }}
                         >
-                            Hiring Tests
+                            X-Men, Avengers and Doraemon
                         </Typography>
-                    </Typography>
-                    <Typography
-                        textAlign="center"
-                        color="text.secondary"
-                        sx={{ alignSelf: 'center', width: { sm: '80%', md: '80%', xs: '80%', fontSize: 'clamp(0.5rem, 1.5rem, 1.5rem)' } }}
-                    >
-                        Shift the focus from algorithms to Real World development tests.<br /> Evaluate practical abilities, not just theoretical knowledge
                     </Typography>
                     <Stack
                         direction={{ xs: 'column', sm: 'row' }}
@@ -111,6 +104,7 @@ export default function Hero() {
                             theme.palette.mode === 'light'
                                 ? `0 0 12px 8px ${alpha('#9CCCFC', 0.2)}`
                                 : `0 0 24px 12px ${alpha('#033363', 0.2)}`,
+                        display: { xs: 'none', sm: 'block' }
                     })}
                 />
             </Container>

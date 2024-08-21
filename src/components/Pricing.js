@@ -20,7 +20,7 @@ const tiers = [
         price: "",
         pricedesc: "",
         description: [
-            "5 credits included",
+            "5 free tests",
             "Early Bird Pricing",
             "Priority Support",
             "Exclusive offers",
@@ -28,38 +28,6 @@ const tiers = [
         buttonText: "Sign up for Early Access",
         buttonVariant: "outlined",
         href: "/signup",
-    },
-    // {
-    //     title: 'Bundle',
-    //     // subheader: 'Recommended',
-    //     oldprice: '100',
-    //     price: '50',
-    //     pricedesc: 'for 12 credits',
-    //     description: [
-    //         '12 credits',
-    //         'Early Bird Pricing',
-    //         'Help center access',
-    //         'Priority Support',
-    //         'Exclusive offers',
-    //     ],
-    //     buttonText: 'Buy Now',
-    //     buttonVariant: 'outlined',
-    //     href: '/checkout'
-    // },
-    {
-        title: "Buy Credits",
-        oldprice: "10",
-        price: "5",
-        pricedesc: "for 1 credit",
-        description: [
-            "1 credit",
-            "Early Bird Pricing",
-            "Help center access",
-            "Priority Support",
-        ],
-        buttonText: "Buy Now",
-        buttonVariant: "outlined",
-        href: "/checkout",
     },
 ];
 
@@ -87,21 +55,19 @@ export default function Pricing() {
                     component="h2"
                     variant="h4"
                     color="text.primary"
-                    style={{ fontSize: "3.5rem" }}
+                    sx={{ fontSize: 'clamp(2.8rem, 10vw, 4rem)', }}
                 >
                     Pre Launch Offer
                 </Typography>
                 <Typography
                     variant="body1"
-                    color="text.secondary"
-                    style={{ fontSize: "1.5rem" }}
+                    sx={{
+                        fontSize: 'clamp(1.5rem, 2rem, 3rem)',
+                        color: (theme) =>
+                            theme.palette.mode === 'light' ? 'primary.main' : 'primary.light',
+                    }}
                 >
-                    You can buy credits at a massive discount as part
-                    of our pre launch offer
-                    <br />
-                    All users signing up in the pre launch will get 5 credits free and
-                    exclusive access to special offers, early-bird pricing, and priority
-                    support.
+                    All users signing up in the pre launch will get 5 free tests
                 </Typography>
             </Box>
             <Grid container spacing={3} alignItems="center" justifyContent="center">
