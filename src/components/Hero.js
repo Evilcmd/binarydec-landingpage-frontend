@@ -55,7 +55,7 @@ export default function Hero() {
                         }}
                     >
                         {/* Demand Real-World Proficiency—Value Engineers Who Create Real Solutions, Not Just Tackle Algorithms. */}
-                        Demand Real-World Proficiency&nbsp;
+                        Hire Top Talent through Developer&nbsp;
                         <Typography
                             component="span"
                             variant="h1"
@@ -65,7 +65,7 @@ export default function Hero() {
                                     theme.palette.mode === 'light' ? 'primary.main' : 'primary.light',
                             }}
                         >
-                            Hire Engineers Who Create Real-World Solutions, Not Just Tackle Algorithms.
+                            Focused Assessments
                         </Typography>
                     </Typography>
                     <Stack

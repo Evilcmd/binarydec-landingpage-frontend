@@ -67,7 +67,7 @@ export default function Pricing() {
                             theme.palette.mode === 'light' ? 'primary.main' : 'primary.light',
                     }}
                 >
-                    All users signing up in the pre launch will get 5 free tests
+                    Sign up Now for 5 Free Tests on Launch
                 </Typography>
             </Box>
             <Grid container spacing={3} alignItems="center" justifyContent="center">
@@ -228,4 +228,4 @@ export default function Pricing() {
             </Grid>
         </Container>
     );
-  }
+}
