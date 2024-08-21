@@ -5,32 +5,27 @@ import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import ConstructionRoundedIcon from '@mui/icons-material/ConstructionRounded';
-import SettingsSuggestRoundedIcon from '@mui/icons-material/SettingsSuggestRounded';
-import ThumbUpAltRoundedIcon from '@mui/icons-material/ThumbUpAltRounded';
 
 const items = [
-    {  
+    {
         //  <ConstructionRoundedIcon/> 
-        icon:<Box sx={{
-            width:"50px",
-            
-            
-            height:"50px",
-        }}><img width={60} height={60} style={{padding:"4px",}} src='/static/development.png'/></Box> ,
+        icon: <Box sx={{
+            width: "50px",
+            height: "50px",
+        }}><img width={60} height={60} style={{ padding: "4px", }} src='/static/development.png' /></Box>,
         title: 'Hire Production Ready Engineers Who Transform Ideas into Impactful Solutions',
         description:
             'Candidates tested on real-world scenarios are more likely to be ready to jump into ongoing projects, reducing the ramp-up time needed to get them productive.',
     },
     {
-        icon:<Box><img src='/static/growth.png' width={50} height={50}/></Box>, 
+        icon: <Box><img src='/static/growth.png' width={50} height={50} /></Box>,
         // <ConstructionRoundedIcon />,
         title: 'Evaluate problem-solving skills of a candidate by immersing them in realistic, job-like scenarios that closely mimic the actual challenges they\'ll face in the role.',
         description:
             'By focusing on practical skills, you can gauge how efficiently a candidate can apply their knowledge to deliver results in a real-world environment.',
     },
     {
-        icon:<Box><img src='/static/requirements.png' width={50} height={50}/></Box>, 
+        icon: <Box><img src='/static/requirements.png' width={50} height={50} /></Box>,
         // <ThumbUpAltRoundedIcon />,
         title: 'Assess their skills by seeing how they tackle and complete real-world projects, showcasing their practical expertise and problem-solving abilities.',
         description:
@@ -84,7 +79,13 @@ export default function Highlights() {
                                     borderColor: 'grey.600',
                                     background: 'transparent',
                                     backgroundColor: 'grey.800',
-                                    boxShadow:'0px 4px 20px rgba(242, 38, 19, 1)',
+                                    // boxShadow: '0px 4px 20px rgba(242, 38, 19, 1)',
+                                    transition: 'box-shadow 0.3s ease-in-out',
+                                    '&:hover': {
+                                        boxShadow: ((theme) =>
+                                            theme.palette.mode === 'light' ? `0px 4px 20px ${theme.palette.primary.main}` : `0px 8px 20px ${theme.palette.primary.main}`)
+                                    },
+
                                 }}
                             >
                                 <Box sx={{ opacity: '50%' }}>{item.icon}</Box>
@@ -92,9 +93,6 @@ export default function Highlights() {
                                     <Typography fontWeight="medium" gutterBottom sx={{ fontSize: '1.25rem' }}>
                                         {item.title}
                                     </Typography>
-                                    {/* <Typography variant="body2" sx={{ color: 'grey.400', fontSize: '1rem' }}>
-                                        {item.description}
-                                    </Typography> */}
                                 </div>
                             </Stack>
                         </Grid>
