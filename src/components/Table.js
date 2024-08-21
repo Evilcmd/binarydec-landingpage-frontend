@@ -15,11 +15,12 @@ function createData(name, binaryDec, otherPlatform) {
 }
 
 const rows = [
-    createData('Frozen yoghurt', true, false),
-    createData('Ice cream sandwich', true, false),
-    createData('Eclair', true, false),
-    createData('Cupcake', false, true),
-    createData('Gingerbread', true, true),
+    createData('Real-Time Skill Validation Analytics', true, false),
+    createData('AI-Driven Interview Insights', true, false),
+    createData('Live Code Pairing Sessions', true, false),
+    createData('Contextual Coding Challenges', true, true),
+    createData('Behavioral Analytics', true, true),
+    createData('Interactive Technical Whiteboards',true,false),
 ];
 
 export default function BasicTable() {
