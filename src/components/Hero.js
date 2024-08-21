@@ -65,7 +65,7 @@ export default function Hero() {
                                     theme.palette.mode === 'light' ? 'primary.main' : 'primary.light',
                             }}
                         >
-                          Seek Engineers Who Create Real-World Solutions, Not Just Tackle Algorithms.
+                          Hire Engineers Who Create Real-World Solutions, Not Just Tackle Algorithms.
                         </Typography>
                     </Typography>
                     <Stack
