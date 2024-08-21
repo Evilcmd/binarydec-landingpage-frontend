@@ -54,7 +54,8 @@ export default function Hero() {
                             fontSize: 'clamp(2.8rem, 10vw, 4rem)',
                         }}
                     >
-                        Im a fan of deadpool but im also a fan of&nbsp;
+                    {/* Demand Real-World Proficiency—Value Engineers Who Create Real Solutions, Not Just Tackle Algorithms. */}
+                    Demand Real-World Proficiency&nbsp;
                         <Typography
                             component="span"
                             variant="h1"
@@ -64,7 +65,7 @@ export default function Hero() {
                                     theme.palette.mode === 'light' ? 'primary.main' : 'primary.light',
                             }}
                         >
-                            X-Men, Avengers and Doraemon
+                          Seek Engineers Who Create Real-World Solutions, Not Just Tackle Algorithms.
                         </Typography>
                     </Typography>
                     <Stack

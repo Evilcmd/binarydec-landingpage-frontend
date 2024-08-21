@@ -83,16 +83,40 @@ export default function Footer() {
                     }}
                 >
                     
-                    <Link color="text.secondary" style={{ cursor: 'pointer' }} onClick={() => scrollToSection('features')}>
+                    <Link color="text.secondary"
+                        sx={{
+                            '&:hover': {
+                                color: 'primary.light', // Change color on hover
+                            },
+                        }}
+                     style={{ cursor: 'pointer', }} onClick={() => scrollToSection('features')}>
                         Features
                     </Link>
-                    <Link color="text.secondary" style={{ cursor: 'pointer' }} onClick={() => scrollToSection('highlights')}>
+                    <Link color="text.secondary"
+                    sx={{
+                            '&:hover': {
+                                color: 'primary.light', // Change color on hover
+                            },
+                        }}
+                     style={{ cursor: 'pointer' }} onClick={() => scrollToSection('highlights')}>
                         Highlights
                     </Link>
-                    <Link color="text.secondary" style={{ cursor: 'pointer' }} onClick={() => scrollToSection('pricing')}>
+                    <Link color="text.secondary"
+                        sx={{
+                            '&:hover': {
+                                color: 'primary.light', // Change color on hover
+                            },
+                        }}
+                     style={{ cursor: 'pointer' }} onClick={() => scrollToSection('pricing')}>
                         Sign Up
                     </Link>
-                    <Link color="text.secondary" style={{ cursor: 'pointer' }} onClick={() => scrollToSection('faq')}>
+                    <Link color="text.secondary"
+                        sx={{
+                            '&:hover': {
+                                color: 'primary.light', // Change color on hover
+                            },
+                        }}
+                     style={{ cursor: 'pointer' }} onClick={() => scrollToSection('faq')}>
                         FAQs
                     </Link>
                 </Box>

@@ -21,8 +21,8 @@ const tiers = [
         pricedesc: "",
         description: [
             "5 free tests",
-            "Early Bird Pricing",
-            "Priority Support",
+            "Access to AI-driven tools",
+            "Priority Feature Requests",
             "Exclusive offers",
         ],
         buttonText: "Sign up for Early Access",
