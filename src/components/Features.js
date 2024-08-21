@@ -91,7 +91,7 @@ export default function Features() {
                                     <Typography
                                         color="text.secondary"
                                         variant="body2"
-                                        sx={{ my: 0.5, fontSize: '1.5rem' }}
+                                        sx={{ my: 0.5, fontSize: '1.25rem' }}
                                     >
                                         {description}
                                     </Typography>

@@ -79,11 +79,10 @@ export default function Footer() {
                         display: { xs: 'none', sm: 'flex' },
                         flexDirection: 'column',
                         gap: 1,
+                        fontSize: 'clamp(1rem, 1.25rem, 1rem)',
                     }}
                 >
-                    <Typography variant="body2" fontWeight={600}>
-                        Product
-                    </Typography>
+                    
                     <Link color="text.secondary" style={{ cursor: 'pointer' }} onClick={() => scrollToSection('features')}>
                         Features
                     </Link>
