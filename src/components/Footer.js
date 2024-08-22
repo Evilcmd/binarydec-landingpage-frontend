@@ -169,7 +169,7 @@ export default function Footer() {
                     </IconButton>
                     <IconButton
                         color="inherit"
-                        href="https://www.linkedin.com/in/vivillon-labs-704977319/"
+                        href="https://www.linkedin.com/in/binary-dec-06048b324/"
                         aria-label="LinkedIn"
                         sx={{ alignSelf: 'center' }}
                     >
