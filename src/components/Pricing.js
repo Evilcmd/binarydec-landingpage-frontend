@@ -130,7 +130,7 @@ export default function Pricing() {
                                                     color: "primary.dark",
                                                 },
                                                 "& .MuiChip-icon": {
-                                                    color: "primary.dark",
+                                                    color: "primary.light",
                                                 },
                                             }}
                                         />

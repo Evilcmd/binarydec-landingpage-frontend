@@ -68,7 +68,7 @@ export default function Footer() {
                             Have questions or need more information? Reach out to us, and we'll get back to you as soon as possible.
                         </Typography>
                         <Button variant="outlined" color="primary" sx={{ flexShrink: 0 }}
-                            href="mailto:vivillonlabs@gmail.com"
+                            href="mailto:binarydec5@gmail.com"
                         >
                             Get in Touch
                         </Button>
