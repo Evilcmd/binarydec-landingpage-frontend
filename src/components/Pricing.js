@@ -55,7 +55,7 @@ export default function Pricing() {
                     component="h2"
                     variant="h4"
                     color="text.primary"
-                    sx={{ fontSize: 'clamp(2.8rem, 10vw, 4rem)', }}
+                    sx={{ fontSize: 'clamp(2.8rem, 3.5rem, 4rem)', }}
                 >
                     Pre Launch Offer
                 </Typography>

@@ -50,7 +50,7 @@ export default function Highlights() {
                         textAlign: { sm: 'left', md: 'center' },
                     }}
                 >
-                    <Typography component="h2" variant="h4" sx={{ fontSize: "clamp(2.5rem, 10vw, 4rem)" }}>
+                    <Typography component="h2" variant="h4" sx={{ fontSize: "clamp(2.5rem, 3.5rem, 4rem)" }}>
                         Why Real World Tests Matter in Hiring
                     </Typography>
                 </Box>

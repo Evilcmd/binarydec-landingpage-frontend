@@ -15,12 +15,12 @@ function createData(name, binaryDec, otherPlatform) {
 }
 
 const rows = [
-    createData('Real-Time Skill Validation Analytics', true, false),
-    createData('AI-Driven Interview Insights', true, false),
-    createData('Live Code Pairing Sessions', true, false),
-    createData('Contextual Coding Challenges', true, true),
-    createData('Behavioral Analytics', true, true),
-    createData('Interactive Technical Whiteboards',true,false),
+    createData('Test Real World Skills', true, false),
+    createData('Automated checks', true, true),
+    createData('Anti Cheat Systems', true, true),
+    createData('Closest to Real Work Perfomance', true, false),
+    createData('Documentation and AI Support', true, false),
+    createData('Test Required skills', true, false),
 ];
 
 export default function BasicTable() {
@@ -37,7 +37,7 @@ export default function BasicTable() {
                 gap: { xs: 3, sm: 6 },
             }}
         >
-            <Typography component="h2" variant="h4" sx={{ fontSize: "clamp(2.5rem, 10vw, 4rem)" }}>
+            <Typography component="h2" variant="h4" sx={{ fontSize: "clamp(2.5rem, 3.5rem, 4rem)" }}>
                 What Makes Us Stand Out
             </Typography>
             <TableContainer

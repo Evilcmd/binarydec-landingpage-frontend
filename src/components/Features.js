@@ -13,9 +13,9 @@ const items = [
             'Build real world applications on the web. Frontend, Backend, Database, Machine Learning, we got it all',
     },
     {
-        title: 'Automated tests',
+        title: 'Automated checks',
         description:
-            'We have automated tests to check if the candidate built the application to specification.',
+            'We have automated checks to see if the candidate built the application to specification.',
     },
     {
         title: 'Anti Cheat Systems',
@@ -30,9 +30,6 @@ const items = [
 ];
 
 export default function Features() {
-    const [selectedItemIndex, setSelectedItemIndex] = React.useState(-1);
-
-    const selectedFeature = items[selectedItemIndex];
 
     return (
         <Container id="features" sx={{ py: { xs: 4, sm: 8 } }}>
@@ -41,7 +38,7 @@ export default function Features() {
                 variant="h1"
                 sx={{
                     display: 'flex', justifyContent: 'center', marginBottom: '3rem',
-                    fontSize: 'clamp(2.5rem, 10vw, 4rem)',
+                    fontSize: 'clamp(2.5rem, 3.5rem, 4rem)',
                 }}
             >
                 Product Features
@@ -57,15 +54,12 @@ export default function Features() {
                                 height: '100%',
                                 width: '100%',
                                 background: 'none',
-                                backgroundColor:
-                                    selectedItemIndex === index ? 'action.selected' : 'action.selected',
+                                backgroundColor: 'action.selected',
                                 borderColor: (theme) => {
                                     if (theme.palette.mode === 'light') {
-                                        return selectedItemIndex === index
-                                            ? 'primary.light'
-                                            : 'primary.light';
+                                        return 'primary.light';
                                     }
-                                    return selectedItemIndex === index ? 'primary.dark' : 'primary.dark';
+                                    return 'primary.dark';
                                 },
                             }}
                         >
