@@ -12,15 +12,15 @@ import EngineeringIcon from '@mui/icons-material/Engineering';
 const items = [
     {
         icon: <SettingsSuggestIcon />,
-        title: 'Real-world tests identify right-fit candidates through skill demonstrations',
+        title: 'The Real-world tests offer insight into how candidates apply their knowledge practically',
     },
     {
         icon: <CodeIcon />,
-        title: 'Evaluating real-world skills identifies thriving developers',
+        title: 'These tests ensure candidates can deliver results in actual work scenarios',
     },
     {
         icon: <EngineeringIcon />,
-        title: 'Real-world tests reduce hiring biases by focusing on abilities',
+        title: 'Development based tests validate candidates\' ability to contribute effectively from day one',
     },
 ];
 
