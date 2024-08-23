@@ -82,23 +82,23 @@ export default function Footer() {
                         fontSize: 'clamp(1rem, 1.25rem, 1rem)',
                     }}
                 >
-                    
+
                     <Link color="text.secondary"
                         sx={{
                             '&:hover': {
                                 color: 'primary.light', // Change color on hover
                             },
                         }}
-                     style={{ cursor: 'pointer', }} onClick={() => scrollToSection('features')}>
+                        style={{ cursor: 'pointer', }} onClick={() => scrollToSection('features')}>
                         Features
                     </Link>
                     <Link color="text.secondary"
-                    sx={{
+                        sx={{
                             '&:hover': {
                                 color: 'primary.light', // Change color on hover
                             },
                         }}
-                     style={{ cursor: 'pointer' }} onClick={() => scrollToSection('highlights')}>
+                        style={{ cursor: 'pointer' }} onClick={() => scrollToSection('highlights')}>
                         Highlights
                     </Link>
                     <Link color="text.secondary"
@@ -107,7 +107,7 @@ export default function Footer() {
                                 color: 'primary.light', // Change color on hover
                             },
                         }}
-                     style={{ cursor: 'pointer' }} onClick={() => scrollToSection('pricing')}>
+                        style={{ cursor: 'pointer' }} onClick={() => scrollToSection('pricing')}>
                         Sign Up
                     </Link>
                     <Link color="text.secondary"
@@ -116,7 +116,7 @@ export default function Footer() {
                                 color: 'primary.light', // Change color on hover
                             },
                         }}
-                     style={{ cursor: 'pointer' }} onClick={() => scrollToSection('faq')}>
+                        style={{ cursor: 'pointer' }} onClick={() => scrollToSection('faq')}>
                         FAQs
                     </Link>
                 </Box>
@@ -169,7 +169,7 @@ export default function Footer() {
                     </IconButton>
                     <IconButton
                         color="inherit"
-                        href="https://www.linkedin.com/in/binary-dec-06048b324/"
+                        href="https://www.linkedin.com/company/binarydec/"
                         aria-label="LinkedIn"
                         sx={{ alignSelf: 'center' }}
                     >
