@@ -55,7 +55,7 @@ export default function Hero() {
                         }}
                     >
                         {/* Demand Real-World Proficiency—Value Engineers Who Create Real Solutions, Not Just Tackle Algorithms. */}
-                        Hire Top Talent through Developement&nbsp;
+                        Hire Top Talent Through Developement&nbsp;
                         <Typography
                             component="span"
                             variant="h1"
@@ -63,7 +63,7 @@ export default function Hero() {
                                 display: 'flex',
                                 flexDirection: { xs: 'column', md: 'column' },
                                 fontSize: 'clamp(2.8rem, 3.3rem, 4rem)',
-                                
+
                                 color: (theme) =>
                                     theme.palette.mode === 'light' ? 'primary.main' : 'primary.light',
                             }}
