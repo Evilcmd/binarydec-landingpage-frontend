@@ -29,7 +29,7 @@ function Copyright(props) {
 const defaultTheme = createTheme();
 
 export default function SignUp() {
-    const PRE_SIGNUP_URL = 'https://binarydec-landingpage-backend.onrender.com/presignup'
+    const PRE_SIGNUP_URL = '20.235.243.120:443/presignup'
 
     const [formData, setFormData] = React.useState({
         name: '',
