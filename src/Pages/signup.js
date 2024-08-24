@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useState } from 'react';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
@@ -10,6 +11,7 @@ import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Snackbar from '@mui/material/Snackbar';
 import { useNavigate } from 'react-router-dom';
+import CircularProgress from '@mui/material/CircularProgress';
 
 function Copyright(props) {
     return (
@@ -24,34 +26,28 @@ function Copyright(props) {
     );
 }
 
-// TODO remove, this demo shouldn't need to reset the theme.
-
 const defaultTheme = createTheme();
 
 export default function SignUp() {
-    const PRE_SIGNUP_URL = 'https://binarydec-bwdeakgravfxgee6.southeastasia-01.azurewebsites.net/presignup'
+    const PRE_SIGNUP_URL = 'https://binarydec-bwdeakgravfxgee6.southeastasia-01.azurewebsites.net/presignup';
 
+    const [loading, setLoading] = useState(false);
     const [formData, setFormData] = React.useState({
         name: '',
         email: '',
         company: '',
     });
-
     const [open, setOpen] = React.useState(false);
-
     const [errors, setErrors] = React.useState({
         nameError: '',
         emailError: '',
         companyError: '',
-    })
+    });
 
     const navigate = useNavigate();
-
     const [snackMessage, setSnackMessage] = React.useState('');
 
     const handleOnChange = (event) => {
-
-
         setFormData({
             ...formData,
             [event.target.name]: event.target.value,
@@ -60,11 +56,7 @@ export default function SignUp() {
 
     const validateInput = () => {
         let isValid = true;
-
-        let errors = {
-
-        };
-
+        let errors = {};
         let nameField = formData['name'];
         let emailField = formData['email'];
         let companyField = formData['company'];
@@ -72,11 +64,9 @@ export default function SignUp() {
         if (!nameField.length) {
             errors.nameError = 'Name is required';
             isValid = false;
-        } else {
-            if (nameField.length < 3) {
-                errors.nameError = 'Length should atleast 3';
-                isValid = false;
-            }
+        } else if (nameField.length < 3) {
+            errors.nameError = 'Length should be at least 3';
+            isValid = false;
         }
 
         if (!emailField.length) {
@@ -88,22 +78,18 @@ export default function SignUp() {
         }
 
         if (!companyField.length) {
-            errors.companyError = 'Company-name is required';
+            errors.companyError = 'Company name is required';
             isValid = false;
         }
 
         setErrors(errors);
         return isValid;
-    }
+    };
 
-    const handleClose = (
-        event,
-        reason,
-    ) => {
+    const handleClose = (event, reason) => {
         if (reason === 'clickaway') {
             return;
         }
-
         setOpen(false);
     };
 
@@ -115,71 +101,68 @@ export default function SignUp() {
         }
 
         try {
+            setLoading(true);
             const response = await fetch(PRE_SIGNUP_URL, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(
-                    {
-                        "name": formData['name'],
-                        "email": formData['email'],
-                        "company": formData['company'],
-                    })
+                body: JSON.stringify({
+                    "name": formData['name'],
+                    "email": formData['email'],
+                    "company": formData['company'],
+                })
             });
 
-            console.log(response);
             if (!response.ok) {
-
-                //   alert(`User-${formData['name']} already exists!`);
                 setSnackMessage(`Email - ${formData['email']} already exists!`);
                 setOpen(true);
-
                 return;
-
             }
 
-            const data = response.json()
+            const data = response.json();
+            data.then((value) => {
+                setSnackMessage("Signed-up successfully!");
+                setOpen(true);
 
-
-            data
-                .then(
-                    (value) => {
-                        console.log(value);
-                        setSnackMessage("Signed-up successfully !");
-                        setOpen(true);
-
-                        setTimeout(() => {
-                            navigate('/');
-                        }, 1500);
-                    }
-                )
-                .catch(
-                    (error) => {
-                        // alert(error);
-                        setSnackMessage(error)
-                        setOpen(true);
-                    }
-                );
-
+                setTimeout(() => {
+                    navigate('/');
+                }, 1500);
+            }).catch((error) => {
+                setSnackMessage(error);
+                setOpen(true);
+            });
 
         } catch (error) {
-            // alert(error)
             setSnackMessage(error);
             setOpen(true);
-
-
         } finally {
-
-            //empty the fields when the entry is done
+            setLoading(false);
         }
-
     };
-
 
     return (
         <ThemeProvider theme={defaultTheme}>
-            <Container component="main" maxWidth="xs">
+            {loading && (
+                <Box
+                    sx={{
+                        position: 'fixed',
+                        top: 0,
+                        left: 0,
+                        width: '100%',
+                        height: '100%',
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        backgroundColor: 'rgba(255, 255, 255, 0.7)',
+                        zIndex: 9999,
+                        backdropFilter: 'blur(5px)',
+                    }}
+                >
+                    <CircularProgress />
+                </Box>
+            )}
+            <Container component="main" maxWidth="xs" sx={loading ? { filter: 'blur(5px)' } : {}}>
                 <CssBaseline />
                 <Box
                     sx={{
@@ -196,7 +179,6 @@ export default function SignUp() {
                     <Box component="form" validate="true" onSubmit={handleSubmit} sx={{ mt: 3 }}>
                         <Grid container spacing={2}>
                             <Grid item xs={12}>
-
                                 <TextField
                                     autoFocus
                                     autoComplete="full-name"
@@ -211,7 +193,6 @@ export default function SignUp() {
                                     helperText={errors.nameError}
                                     value={formData.name}
                                     onChange={handleOnChange}
-
                                 />
                             </Grid>
                             <Grid item xs={12}>
@@ -255,7 +236,6 @@ export default function SignUp() {
                         >
                             Sign Up
                         </Button>
-
                         <Snackbar
                             open={open}
                             autoHideDuration={1500}
