@@ -29,7 +29,7 @@ function Copyright(props) {
 const defaultTheme = createTheme();
 
 export default function SignUp() {
-    const PRE_SIGNUP_URL = 'http://20.235.243.120:443/presignup'
+    const PRE_SIGNUP_URL = 'https://binarydec-bwdeakgravfxgee6.southeastasia-01.azurewebsites.net/presignup'
 
     const [formData, setFormData] = React.useState({
         name: '',
