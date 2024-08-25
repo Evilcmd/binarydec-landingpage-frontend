@@ -65,7 +65,7 @@ export default function Footer() {
                             Contact Us
                         </Typography>
                         <Typography variant="body2" color="text.secondary" mb={2} sx={{ fontSize: '1rem' }}>
-                            Have questions or need more information? Reach out to us, and we'll get back to you as soon as possible.
+                            Have questions or need more information? Write to us, and we'll get back to you as soon as possible.
                         </Typography>
                         <Button variant="outlined" color="primary" sx={{ flexShrink: 0 }}
                             href="mailto:binarydec5@gmail.com"

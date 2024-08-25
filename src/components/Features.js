@@ -8,24 +8,34 @@ import Typography from '@mui/material/Typography';
 
 const items = [
     {
-        title: 'Build Any Application',
+        title: 'Build Any Application on The Web',
         description:
             'Build real world applications on the web. Frontend, Backend, Database, Machine Learning, we got it all',
     },
     {
-        title: 'Automated checks',
+        title: 'No Setup Required',
         description:
-            'We have automated checks to see if the candidate built the application to specification.',
+            'No installation, no compatability issues. Everything works out of the box',
+    },
+    {
+        title: 'Automatic evaluation',
+        description:
+            'We\'ve automated the evaluation by measuring how well the candidate\'s application meets the specs',
     },
     {
         title: 'Anti Cheat Systems',
         description:
-            'We use machine learning to observe candidates\' live video to ensure fairness.',
+            'We use machine learning models to observe candidates\' live video to ensure fairness',
     },
     {
         title: 'Documentation and AI Support',
         description:
-            'We provide documentation and AI support to simulate a real-world development environment.',
+            'We provide documentation and AI support to simulate a real-world development environment',
+    },
+    {
+        title: 'Candidate Friendly Experience',
+        description:
+            'We provide a VS Code interface, so users can start coding in a familiar UI right away',
     },
 ];
 

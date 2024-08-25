@@ -15,15 +15,14 @@ function createData(name, binaryDec, otherPlatform) {
 }
 
 const rows = [
-    createData('Test real-world project skills',true,false),
-    createData('Skill-Specific Task Libraries', true, false),
-    
-    createData('Automated Code Review', true, false),
-    createData('Automated Testing checks', true, true),
+    createData('Test real-world project skills', true, false),
+    createData('Automated Testing', true, true),
     createData('Anti Cheat Systems', true, true),
-    createData('Automated Skill Gap Analysis', true, false),
+    createData('Closest to Real Work Perfomance', true, false),
     createData('Documentation and AI Support', true, false),
     createData('Code Efficiency Metrics', true, false),
+    createData('Documentation and AI Support', true, false),
+    createData('Test Required skills', true, false),
 ];
 
 export default function BasicTable() {

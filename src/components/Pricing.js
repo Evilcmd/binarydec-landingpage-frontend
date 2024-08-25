@@ -21,7 +21,7 @@ const tiers = [
         pricedesc: "",
         description: [
             "5 free tests",
-            "Be the First to Access the MVP",
+            "Get Early Access",
             "Priority Feature Requests",
             "Exclusive offers",
             "Beta Testing Opportunities",
