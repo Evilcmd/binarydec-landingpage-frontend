@@ -18,6 +18,11 @@ const items = [
             'No installation, no compatability issues. Everything works out of the box',
     },
     {
+        title: 'Familiar UI',
+        description:
+            'We provide a VS Code interface, so users can start coding in a familiar UI right away',
+    },
+    {
         title: 'Automatic evaluation',
         description:
             'We\'ve automated the evaluation by measuring how well the candidate\'s application meets the specs',
@@ -31,11 +36,6 @@ const items = [
         title: 'Documentation and AI Support',
         description:
             'We provide documentation and AI support to simulate a real-world development environment',
-    },
-    {
-        title: 'Candidate Friendly Experience',
-        description:
-            'We provide a VS Code interface, so users can start coding in a familiar UI right away',
     },
 ];
 
