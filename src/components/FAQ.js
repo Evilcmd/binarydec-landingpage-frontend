@@ -50,29 +50,6 @@ export default function FAQ() {
                         id="panel1d-header"
                     >
                         <Typography component="h3" variant="subtitle2" style={{ fontSize: '1.25rem' }}>
-                            When is the expected launch date for the product?
-                        </Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                        <Typography
-                            variant="body2"
-                            gutterBottom
-                            sx={{ maxWidth: { sm: '100%', md: '70%', fontSize: '1rem', textAlign: 'justify' } }}
-                        >
-                            We're excited to announce that our product will be launching soon! We're in the final stages of development and expect to be live within the next month or two. Stay tuned for updates, and thank you for your patience as we work to deliver the best possible experience
-                        </Typography>
-                    </AccordionDetails>
-                </Accordion>
-                <Accordion
-                    expanded={expanded === 'panel2'}
-                    onChange={handleChange('panel2')}
-                >
-                    <AccordionSummary
-                        expandIcon={<ExpandMoreIcon />}
-                        aria-controls="panel2d-content"
-                        id="panel2d-header"
-                    >
-                        <Typography component="h3" variant="subtitle2" style={{ fontSize: '1.25rem' }}>
                             Can I return the credits bought?
                         </Typography>
                     </AccordionSummary>
@@ -86,6 +63,31 @@ export default function FAQ() {
                         </Typography>
                     </AccordionDetails>
                 </Accordion>
+
+                <Accordion
+                    expanded={expanded === 'panel2'}
+                    onChange={handleChange('panel2')}
+                >
+                    <AccordionSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls="panel2d-content"
+                        id="panel2d-header"
+                    >
+                        <Typography component="h3" variant="subtitle2" style={{ fontSize: '1.25rem' }}>
+                            Can we add more users or upgrade our plan mid-cycle?
+                        </Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                        <Typography
+                            variant="body2"
+                            gutterBottom
+                            sx={{ maxWidth: { sm: '100%', md: '70%', fontSize: '1rem', textAlign: 'justify' } }}
+                        >
+                            Absolutely. Our platform scales with your business. You can add user seats or upgrade your tier at any time, and we will prorate the cost for the remainder of your current billing cycle.
+                        </Typography>
+                    </AccordionDetails>
+                </Accordion>
+
                 <Accordion
                     expanded={expanded === 'panel3'}
                     onChange={handleChange('panel3')}
@@ -96,7 +98,7 @@ export default function FAQ() {
                         id="panel3d-header"
                     >
                         <Typography component="h3" variant="subtitle2" style={{ fontSize: '1.25rem' }}>
-                            Is there any benefits for signing up early?
+                            How do you secure our company's data?
                         </Typography>
                     </AccordionSummary>
                     <AccordionDetails>
@@ -105,10 +107,11 @@ export default function FAQ() {
                             gutterBottom
                             sx={{ maxWidth: { sm: '100%', md: '70%', fontSize: '1rem', textAlign: 'justify' } }}
                         >
-                            Absolutely! All users signing up in the pre launch will get 5 credits free and will also exclusive access to special offers, early-bird pricing, and priority support. Plus, you'll be the first to know about new features and updates. It's our way of thanking you for joining us on this exciting journey from the very beginning.
+                            Security is our top priority. We use enterprise-grade AES-256 encryption for data at rest and TLS 1.2+ for data in transit. We also offer features like Single Sign-On (SSO), Two-Factor Authentication (2FA), and Role-Based Access Control (RBAC).
                         </Typography>
                     </AccordionDetails>
                 </Accordion>
+
                 <Accordion
                     expanded={expanded === 'panel4'}
                     onChange={handleChange('panel4')}
@@ -119,7 +122,7 @@ export default function FAQ() {
                         id="panel4d-header"
                     >
                         <Typography component="h3" variant="subtitle2" style={{ fontSize: '1.25rem' }}>
-                            Will my data be safe and secure?
+                            What kind of support do you offer?
                         </Typography>
                     </AccordionSummary>
                     <AccordionDetails>
@@ -128,7 +131,55 @@ export default function FAQ() {
                             gutterBottom
                             sx={{ maxWidth: { sm: '100%', md: '70%', fontSize: '1rem', textAlign: 'justify' } }}
                         >
-                            Your data security is our top priority. We've implemented industry-standard security measures to ensure your information is protected. You can trust that your data will be safe with us from day one.
+                            All plans include 24/7 email and chat support, plus access to our comprehensive knowledge base. Professional and Enterprise tiers include priority support with guaranteed SLAs and a dedicated Customer Success Manager (CSM).
+                        </Typography>
+                    </AccordionDetails>
+                </Accordion>
+
+                <Accordion
+                    expanded={expanded === 'panel5'}
+                    onChange={handleChange('panel5')}
+                >
+                    <AccordionSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls="panel5d-content"
+                        id="panel5d-header"
+                    >
+                        <Typography component="h3" variant="subtitle2" style={{ fontSize: '1.25rem' }}>
+                            Do you provide training for our team?
+                        </Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                        <Typography
+                            variant="body2"
+                            gutterBottom
+                            sx={{ maxWidth: { sm: '100%', md: '70%', fontSize: '1rem', textAlign: 'justify' } }}
+                        >
+                            Yes. We offer extensive onboarding resources, including video tutorials and interactive documentation. Enterprise plans include customized, live training sessions for your admins and end-users.
+                        </Typography>
+                    </AccordionDetails>
+                </Accordion>
+
+                <Accordion
+                    expanded={expanded === 'panel6'}
+                    onChange={handleChange('panel6')}
+                >
+                    <AccordionSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls="panel6d-content"
+                        id="panel6d-header"
+                    >
+                        <Typography component="h3" variant="subtitle2" style={{ fontSize: '1.25rem' }}>
+                            Do you have an API for custom integrations?
+                        </Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                        <Typography
+                            variant="body2"
+                            gutterBottom
+                            sx={{ maxWidth: { sm: '100%', md: '70%', fontSize: '1rem', textAlign: 'justify' } }}
+                        >
+                            Yes, we provide a robust, well-documented REST API and webhooks, allowing your engineering team to build custom workflows and integrate seamlessly with your internal proprietary systems.
                         </Typography>
                     </AccordionDetails>
                 </Accordion>

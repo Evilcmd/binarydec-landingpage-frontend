@@ -13,7 +13,7 @@ function Copyright() {
     return (
         <Typography variant="body2" color="text.secondary" mt={1}>
             {'Copyright © '}
-            <Link href="#">BinaryDec&nbsp;</Link>
+            <Link href="#">Ditona&nbsp;</Link>
             {new Date().getFullYear()}
         </Typography>
     );
@@ -68,13 +68,13 @@ export default function Footer() {
                             Have questions or need more information? Write to us, and we'll get back to you as soon as possible.
                         </Typography>
                         <Button variant="outlined" color="primary" sx={{ flexShrink: 0 }}
-                            href="mailto:binarydec5@gmail.com"
+                            href="mailto:support@ditona.tech"
                         >
                             Get in Touch
                         </Button>
                     </Box>
                 </Box>
-                <Box
+                {/* <Box
                     sx={{
                         display: { xs: 'none', sm: 'flex' },
                         flexDirection: 'column',
@@ -119,7 +119,7 @@ export default function Footer() {
                         style={{ cursor: 'pointer' }} onClick={() => scrollToSection('faq')}>
                         FAQs
                     </Link>
-                </Box>
+                </Box> */}
                 <Box
                     sx={{
                         display: { xs: 'none', sm: 'flex' },

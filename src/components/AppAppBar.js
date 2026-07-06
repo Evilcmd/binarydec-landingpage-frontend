@@ -88,7 +88,7 @@ function AppAppBar({ mode, toggleColorMode }) {
                                 alt="logo of sitemark"
                             />
                             <Typography fontSize='1rem' fontFamily='monospace' color="text.primary" padding="6px" >
-                                BinaryDec
+                                Ditona
                             </Typography>
 
                             <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
@@ -131,9 +131,9 @@ function AppAppBar({ mode, toggleColorMode }) {
                                 variant="contained"
                                 size="small"
                                 component="a"
-                                onClick={() => scrollToSection('pricing')}
+                                onClick={() => window.open('https://calendly.com/ditona/30min', '_blank', 'noopener,noreferrer')}
                             >
-                                Early Sign up
+                                Book Demo
                             </Button>
                         </Box>
                         <Box sx={{ display: { sm: '', md: 'none' } }}>

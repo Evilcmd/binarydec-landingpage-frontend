@@ -2,40 +2,27 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";
-import Chip from "@mui/material/Chip";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Container from "@mui/material/Container";
 import Divider from "@mui/material/Divider";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 import CheckCircleRoundedIcon from "@mui/icons-material/CheckCircleRounded";
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 
-const tiers = [
-    {
-        title: "Sign up",
-        subheader: "Recommended",
-
-        price: "",
-        pricedesc: "",
-        description: [
-            "5 free tests",
-            "Get Early Access",
-            "Priority Feature Requests",
-            "Exclusive offers",
-            "Beta Testing Opportunities",
-        ],
-        buttonText: "Sign up for Early Access",
-        buttonVariant: "outlined",
-        href: "/signup",
-    },
+const demoFeatures = [
+    "Tailored product walkthrough",
+    "Discuss your specific use cases",
+    "Custom pricing & ROI analysis",
+    "Security and compliance overview",
+    "Q&A with a product expert",
 ];
 
-export default function Pricing() {
+export default function CallToAction() {
     return (
         <Container
-            id="pricing"
+            id="cta"
             sx={{
                 pt: { xs: 4, sm: 12 },
                 pb: { xs: 8, sm: 16 },
@@ -46,186 +33,125 @@ export default function Pricing() {
                 gap: { xs: 3, sm: 6 },
             }}
         >
+            {/* Header Section */}
             <Box
                 sx={{
                     width: { sm: "100%", md: "60%" },
-                    textAlign: { sm: "left", md: "center" },
+                    textAlign: "center",
                 }}
             >
                 <Typography
                     component="h2"
                     variant="h4"
                     color="text.primary"
-                    sx={{ fontSize: 'clamp(2.8rem, 3.5rem, 4rem)', }}
+                    sx={{ fontSize: 'clamp(2.5rem, 3.2rem, 3.5rem)', mb: 2, fontWeight: 'bold' }}
                 >
-                    Pre Launch Offer
+                    Ready to scale your operations?
                 </Typography>
                 <Typography
                     variant="body1"
                     sx={{
-                        fontSize: 'clamp(1.5rem, 2rem, 3rem)',
-                        color: (theme) =>
-                            theme.palette.mode === 'light' ? 'primary.main' : 'primary.light',
+                        fontSize: 'clamp(1.2rem, 1.5rem, 1.8rem)',
+                        color: "text.secondary",
                     }}
                 >
-                    Sign up Now for 5 Free Tests on Launch
+                    See how our platform can be customized for your organization's unique needs.
                 </Typography>
             </Box>
+
+            {/* CTA Card Section */}
             <Grid container spacing={3} alignItems="center" justifyContent="center">
-                {tiers.map((tier) => (
-                    <Grid
-                        item
-                        key={tier.title}
-                        xs={12}
-                        sm={tier.title === "Enterprise" ? 12 : 6}
-                        md={4}
+                <Grid item xs={12} sm={8} md={6}>
+                    <Card
+                        sx={{
+                            p: 3,
+                            display: "flex",
+                            flexDirection: "column",
+                            gap: 3,
+                            border: "2px solid",
+                            borderColor: "primary.main",
+                            boxShadow: (theme) =>
+                                theme.palette.mode === 'light'
+                                    ? '0 8px 24px rgba(0,0,0,0.1)'
+                                    : '0 8px 24px rgba(0,0,0,0.5)',
+                        }}
                     >
-                        <Card
-                            sx={{
-                                p: 2,
-                                display: "flex",
-                                flexDirection: "column",
-                                gap: 4,
-                                border:
-                                    tier.title === "Professional" ? "4px solid" : "3px solid",
-
-                                borderColor: tier.title === "Professional" ? "white" : "grey",
-                                background:
-                                    tier.title === "Professional"
-                                        ? "linear-gradient(#033363, #021F3B)"
-                                        : undefined,
-                            }}
-                        >
-                            <CardContent>
-                                <Box
-                                    sx={{
-                                        mb: 1,
-                                        display: "flex",
-                                        justifyContent: "space-between",
-                                        alignItems: "center",
-                                        color: tier.title === "Professional" ? "grey.100" : "",
-                                    }}
+                        <CardContent sx={{ p: 0 }}>
+                            <Box
+                                sx={{
+                                    mb: 2,
+                                    display: "flex",
+                                    justifyContent: "center",
+                                    alignItems: "center",
+                                }}
+                            >
+                                <Typography
+                                    component="h3"
+                                    variant="h5"
+                                    fontWeight="bold"
+                                    color="primary.main"
+                                    sx={{ display: 'flex', alignItems: 'center', gap: 1 }}
                                 >
-                                    <Typography
-                                        component="h3"
-                                        variant="h6"
-                                        sx={{
-                                            display: "flex",
-                                            justifyContent: "center",
-                                            width: "100%",
-                                            fontSize: tier.title === "Sign up" ? "2.4rem" : "1.5rem",
-                                        }}
-                                    >
-                                        {tier.title !== "Sign up" ? "Subscription" : tier.title}
-                                    </Typography>
-                                    {tier.title === "Sign up" && (
-                                        <Chip
-                                            icon={<AutoAwesomeIcon />}
-                                            label={tier.subheader}
-                                            size="small"
-                                            sx={{
-                                                background: (theme) =>
-                                                    theme.palette.mode === "light" ? "" : "none",
-                                                backgroundColor: "primary.contrastText",
-                                                "& .MuiChip-label": {
-                                                    color: "primary.dark",
-                                                },
-                                                "& .MuiChip-icon": {
-                                                    color: "primary.light",
-                                                },
-                                            }}
-                                        />
-                                    )}
-                                </Box>
+                                    <CalendarMonthIcon /> Book a Demo
+                                </Typography>
+                            </Box>
 
-                                <Box
-                                    sx={{
-                                        display: "flex",
-                                        alignItems: "baseline",
-                                        color:
-                                            tier.title === "Professional" ? "grey.50" : undefined,
-                                    }}
-                                >
-                                    {tier.title !== "Sign up" ? (
-                                        <Typography
-                                            component="h3"
-                                            variant="h6"
-                                            style={{
-                                                fontSize: "2rem",
-                                                display: "flex",
-                                                justifyContent: "center",
-                                                width: "100%",
-                                            }}
-                                        >
-                                            &nbsp; Coming Soon
-                                        </Typography>
-                                    ) : (
-                                        <></>
-                                    )}
-                                </Box>
+                            <Divider
+                                sx={{
+                                    my: 2,
+                                    opacity: 0.5,
+                                    borderColor: "grey.500",
+                                }}
+                            />
 
-                                <Divider
-                                    sx={{
-                                        my: 1,
-                                        opacity: 0.2,
-                                        borderColor: "grey.500",
-                                    }}
-                                />
-                                {tier.description.map((line) => (
+                            {/* Features List */}
+                            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5, mt: 3 }}>
+                                {demoFeatures.map((line) => (
                                     <Box
                                         key={line}
                                         sx={{
-                                            py: 1,
                                             display: "flex",
-                                            gap: 1.5,
+                                            gap: 2,
                                             alignItems: "center",
                                         }}
                                     >
                                         <CheckCircleRoundedIcon
                                             sx={{
-                                                width: 20,
-                                                color:
-                                                    tier.title === "Professional"
-                                                        ? "primary.light"
-                                                        : "primary.main",
+                                                width: 24,
+                                                color: "primary.main",
                                             }}
                                         />
                                         <Typography
-                                            component="text"
-                                            variant="subtitle2"
-                                            sx={{
-                                                color:
-                                                    tier.title === "Professional"
-                                                        ? "grey.200"
-                                                        : undefined,
-                                            }}
+                                            component="span"
+                                            variant="subtitle1"
+                                            sx={{ color: "text.primary" }}
                                         >
                                             {line}
                                         </Typography>
                                     </Box>
                                 ))}
-                            </CardContent>
-                            <CardActions>
-                                {tier.title === "Sign up" ? (
-                                    <Button
-                                        fullWidth
-                                        variant={tier.buttonVariant}
-                                        component="a"
-                                        href={tier.href}
-                                        target="_blank"
-                                        sx={{
-                                            border: "3px solid",
-                                        }}
-                                    >
-                                        {tier.buttonText}
-                                    </Button>
-                                ) : (
-                                    <></>
-                                )}
-                            </CardActions>
-                        </Card>
-                    </Grid>
-                ))}
+                            </Box>
+                        </CardContent>
+
+                        <CardActions sx={{ p: 0, mt: 2 }}>
+                            <Button
+                                fullWidth
+                                variant="contained"
+                                size="large"
+                                component="a"
+                                href="https://calendly.com/ditona/30min" // Update this link to your scheduling tool (e.g., Calendly)
+                                target="_blank"
+                                sx={{
+                                    py: 1.5,
+                                    fontSize: '1.1rem',
+                                    fontWeight: 'bold',
+                                }}
+                            >
+                                Schedule Your Call
+                            </Button>
+                        </CardActions>
+                    </Card>
+                </Grid>
             </Grid>
         </Container>
     );

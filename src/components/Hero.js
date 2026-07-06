@@ -78,10 +78,10 @@ export default function Hero() {
                         useFlexGap
                         sx={{ pt: 2, width: { xs: '100%', sm: 'auto' } }}
                     >
-                        <Button variant="contained" color="primary" onClick={() => scrollToSection('pricing')}>
-                            Early Signup
+                        <Button variant="contained" color="primary" onClick={() => window.open('https://calendly.com/ditona/30min', 'noopener,noreferrer')}>
+                            Book Demo
                         </Button>
-                        <Button variant="outlined" color="primary" href="mailto:vivillonlabs@gmail.com">
+                        <Button variant="outlined" color="primary" href="mailto:support@ditona.tech">
                             Contact Us
                         </Button>
                     </Stack>
